@@ -1,0 +1,24 @@
+<h1>Bidpal - The Bridge Bidding practice site</h1>
+<table>
+  <tr>
+    <th>Username</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% if @user_session %>
+<% @user_sessions.each do |user_session| %>
+  <tr>
+    <td><%= user_session.username %></td>
+    <td><%= link_to 'Show', user_session %></td>
+    <td><%= link_to 'Edit', edit_user_session_path(user_session) %></td>
+    <td><%= link_to 'Destroy', user_session, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User session', new_user_session_path %>

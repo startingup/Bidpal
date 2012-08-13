@@ -1,0 +1,42 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<H1> "Set Rules" </H1>
+
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<H1> Set Rules for player hands </H1>
+
+  <div class="field">
+    <%= f.label :Player %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :Total_Points %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :HCP %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :Denomination_Points %><br />
+    <%= f.text_field :username %>
+  </div>
+  
+<% end %>
+
+
