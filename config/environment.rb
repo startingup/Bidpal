@@ -15,7 +15,7 @@ BidPal::Application.initialize!
  :port                 => "587",
  :domain               => 'persistent.co.in',
  :user_name            => 'ammar_nasikwala@persistent.co.in',
- :password             => 'changeme123()',
+ :password             => 'doll52)(',
  :authentication       => 'login',
  :enable_starttls_auto => true
  }

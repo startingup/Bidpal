@@ -60,6 +60,23 @@ BidPal::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  config.action_mailer.default_url_options = {
+  :host => '10.77.111.64:3000' 
+  }
+  config.action_mailer.delivery_method = :sendmail #:smtp
+  config.action_mailer.smtp_settings = {
+  :address => "mail.persistent.co.in",
+  :port => 587,
+  :domain               => 'persistent.co.in',
+  :user_name            => 'ammar_nasikwala@persistent.co.in',
+  :password             => 'doll52)(',
+  :authentication       => 'login',
+  :enable_starttls_auto => true
+  }
+  config.mailer_sender = "ammar_nasikwala@persistent.co.in"
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true 
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)

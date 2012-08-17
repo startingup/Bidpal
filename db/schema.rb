@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120725063601) do
+ActiveRecord::Schema.define(:version => 20120817103756) do
 
   create_table "user_sessions", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -20,13 +20,11 @@ ActiveRecord::Schema.define(:version => 20120725063601) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
-    t.string   "email"
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
-    t.string   "name"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -39,6 +37,8 @@ ActiveRecord::Schema.define(:version => 20120725063601) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "role"
+    t.string   "name"
+    t.string   "email"
   end
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true

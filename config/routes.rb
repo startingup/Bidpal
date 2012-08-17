@@ -1,5 +1,4 @@
 BidPal::Application.routes.draw do
-  #devise_for :users
 
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords"}
   devise_scope :user do
@@ -73,6 +72,7 @@ BidPal::Application.routes.draw do
   root :to => "user_sessions#new"
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
-  #match 'login' => 'devise/sessions#new', :as => :login
-  #match 'logout' => 'devise/registrations#new', :as => :logout
+  # root :to => "devise/sessions#new"
+  # match 'login' => 'devise/sessions#new', :as => :login
+  # match 'logout' => 'devise/registrations#new', :as => :logout
 end
