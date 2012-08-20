@@ -1,3 +1,7 @@
+require File.expand_path('../boot', __FILE__)
+require 'devise/orm/active_record'
+require 'rails/all'
+
 BidPal::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -49,7 +53,7 @@ BidPal::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Enable threaded mode
   # config.threadsafe!
