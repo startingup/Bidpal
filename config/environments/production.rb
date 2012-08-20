@@ -1,6 +1,3 @@
-require File.expand_path('../boot', __FILE__)
-require 'devise/orm/active_record'
-require 'rails/all'
 
 BidPal::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb

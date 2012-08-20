@@ -34,7 +34,9 @@ module BidPal
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    config.encoding = "utf-8"
+	config.gem "authlogic"
+    
+	config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
@@ -57,5 +59,7 @@ module BidPal
     config.assets.version = '1.0'
 	
 	config.assets.initialize_on_precompile = false #for heroku
+	
+	#<%= form_for(@user_session) do |f| %>  belongs to views/user_session/_form.html.erb
   end
 end

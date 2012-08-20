@@ -2,19 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'mysql'
-#gem 'pg', '~>0.13.2'
+gem 'pg', '~>0.13.2'
 
-group :development, :test do
- gem 'pg', '0.13.2'
-end  
-
-group :production do
- gem 'pg', '0.13.2'
-end 
 
 gem 'rake', '0.9.2.2'
 gem 'authlogic', '3.1.2'
