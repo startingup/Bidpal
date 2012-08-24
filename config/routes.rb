@@ -3,10 +3,13 @@ BidPal::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords"}
   devise_scope :user do
 
-    #root :to => "devise/sessions#new"
-	root :to => "user_sessions#new"
+    root :to => "devise/sessions#new"
+	#root :to => "user_sessions#new"
     get "sign_in", :to => "devise/sessions#new"
     get "sign_up", :to => "devise/registrations#new"
+	
+  match 'login' => 'devise/sessions#new', :as => :login
+  match 'logout' => 'devise/registrations#new', :as => :logout
   end
 
   resources :users, :user_sessions
@@ -69,10 +72,10 @@ BidPal::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  root :to => "user_sessions#new"
-  match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#destroy', :as => :logout
-  # root :to => "devise/sessions#new"
-  # match 'login' => 'devise/sessions#new', :as => :login
-  # match 'logout' => 'devise/registrations#new', :as => :logout
+  # root :to => "user_sessions#new"
+  # match 'login' => 'user_sessions#new', :as => :login
+  # match 'logout' => 'user_sessions#destroy', :as => :logout
+  root :to => "devise/sessions#new"
+  match 'login' => 'devise/sessions#new', :as => :login
+  match 'logout' => 'devise/registrations#new', :as => :logout
 end
