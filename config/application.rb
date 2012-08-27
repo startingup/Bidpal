@@ -3,6 +3,7 @@ require 'orm_adapter'
 require 'devise/orm/active_record'
 require 'rails/all'
 require 'rails/commands'
+require 'orm_adapter/adapters/active_record'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
