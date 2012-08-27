@@ -6,6 +6,7 @@ ENV['RAILS_ENV'] ||= 'production'
 #require 'devise/orm/active_record'
 # Load the rails application
 require File.expand_path('../application', __FILE__)
+require 'active_support/dependencies'
 
 # Initialize the rails application
 BidPal::Application.initialize!
