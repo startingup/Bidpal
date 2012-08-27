@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-require 'orm_adapter/base'
+require 'orm_adapter'
 require 'devise/orm/active_record'
 require 'rails/all'
 
