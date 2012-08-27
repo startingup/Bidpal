@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 require 'orm_adapter'
 require 'devise/orm/active_record'
 require 'rails/all'
+require 'rails/commands'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
