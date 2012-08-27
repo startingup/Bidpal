@@ -34,7 +34,7 @@ module BidPal
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    DataMapper::setup(:default, ENV['DATABASE_URL'] || "postgres://postgres:ps7153!@#@ps7153/BidPal_production")
+    # DataMapper::setup(:default, ENV['DATABASE_URL'] || "postgres://postgres:ps7153!@#@ps7153/BidPal_production")
 
 	
 	config.gem "authlogic"
