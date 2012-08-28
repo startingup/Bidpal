@@ -71,10 +71,10 @@ BidPal::Application.configure do
   :address => "mail.persistent.co.in",
   :port => 587,
   :domain               => 'persistent.co.in',
-  #:user_name            => 'ammar_nasikwala@persistent.co.in',
-  #:password             => 'doll52)(',
-  #:authentication       => 'login',
-  :enable_starttls_auto => true
+  :user_name            => 'ammar_nasikwala@persistent.co.in',
+  :password             => 'doll52)(',
+  :authentication       => 'plain',
+  #:enable_starttls_auto => true
   }
   config.mailer_sender = "ammar_nasikwala@persistent.co.in"
   config.action_mailer.raise_delivery_errors = true
