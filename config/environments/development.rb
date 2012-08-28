@@ -46,7 +46,7 @@ BidPal::Application.configure do
   :user_name            => 'ammar_nasikwala@persistent.co.in',
   :password             => 'doll52)(',
   :authentication       => 'login',
-  :enable_starttls_auto => true
+  :enable_starttls_auto => false
   }
   config.mailer_sender = "ammar_nasikwala@persistent.co.in"
   config.action_mailer.raise_delivery_errors = true
