@@ -66,7 +66,7 @@ BidPal::Application.configure do
   config.action_mailer.default_url_options = {
   :host => '10.77.111.64:3000' 
   }
-  config.action_mailer.delivery_method = :sendmail #:smtp
+  config.action_mailer.delivery_method = :smtp #:sendmail
   config.action_mailer.smtp_settings = {
   :address => "mail.persistent.co.in",
   :port => 587,
