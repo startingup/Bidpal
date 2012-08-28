@@ -3,7 +3,7 @@
 
 ENV['RAILS_ENV'] ||= 'production'
 
-
+#require File.dirname(__FILE__) + "/../../config/environment"
 # Load the rails application
 require File.expand_path('../application', __FILE__)
 require 'active_support/dependencies'
@@ -24,5 +24,5 @@ BidPal::Application.initialize!
  :user_name            => 'ammar_nasikwala@persistent.co.in',
  :password             => 'doll52)(',
  :authentication       => 'login',
- :enable_starttls_auto => false
+ :enable_starttls_auto => true
  }
