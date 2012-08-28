@@ -68,15 +68,15 @@ BidPal::Application.configure do
   }
   config.action_mailer.delivery_method = :sendmail #:smtp
   config.action_mailer.smtp_settings = {
-  :address => "smtp.gmail.com",
+  :address => "mail.persistent.co.in",
   :port => 587,
-  :domain               => 'gmail.com',
-  :user_name            => 'ammart.786@gmail.com',
-  :password             => 'yahusain786110',
+  :domain               => 'persistent.co.in',
+  :user_name            => 'ammar_nasikwala@persistent.co.in',
+  :password             => 'doll52)(',
   :authentication       => 'login',
   :enable_starttls_auto => true
   }
-  config.mailer_sender = "ammart.786@gmail.com"
+  config.mailer_sender = "ammar_nasikwala@persistent.co.in"
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true 
 
