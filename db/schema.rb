@@ -11,7 +11,59 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120817103756) do
+ActiveRecord::Schema.define(:version => 20120910112306) do
+
+  create_table "hand_states", :force => true do |t|
+    t.string   "email"
+    t.integer  "length"
+    t.integer  "points"
+    t.integer  "fl"
+    t.integer  "fv"
+    t.integer  "together"
+    t.integer  "totalpots"
+    t.integer  "totalfl"
+    t.integer  "totalfv"
+    t.integer  "bits"
+    t.integer  "loser"
+    t.integer  "totalloser"
+    t.integer  "control"
+    t.integer  "totalcontrol"
+    t.integer  "counts"
+    t.integer  "totalcounts"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "handstates", :force => true do |t|
+    t.integer  "length"
+    t.integer  "points"
+    t.integer  "fl"
+    t.integer  "fv"
+    t.integer  "together"
+    t.integer  "totalpots"
+    t.integer  "totalfl"
+    t.integer  "totalfv"
+    t.integer  "bits"
+    t.integer  "loser"
+    t.integer  "totalloser"
+    t.integer  "control"
+    t.integer  "totalcontrol"
+    t.integer  "counts"
+    t.integer  "totalcounts"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
 
   create_table "user_sessions", :force => true do |t|
     t.datetime "created_at", :null => false

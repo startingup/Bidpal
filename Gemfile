@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 
 
-#gem 'mysql'
+gem 'mysql'
 gem 'pg', '~>0.13.2'
 
 

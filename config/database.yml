@@ -17,7 +17,7 @@ development:
   #database: BidPal_development_new
   pool: 5
   username: postgres	#root
-  password: ps7153!@# 	#root
+  password: ps7153!@#	#root
   host: localhost
 
 # Warning: The database defined as "test" will be erased and

@@ -1,6 +1,9 @@
 class RegistrationsController < Devise::RegistrationsController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
   prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
+  
+  #before_filter :check_permissions, :only => [:new, :create, :cancel]
+  #skip_before_filter :require_no_authentication
 
   def new
     format.html { redirect_to(:users, :notice => 'Welcome to BidPal.') }

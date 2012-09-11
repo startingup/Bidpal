@@ -13,7 +13,7 @@ BidPal::Application.initialize!
 
  ActionMailer::Base.delivery_method = :smtp
  ActionMailer::Base.default_url_options = {
- :host => '10.77.111.64:3000'
+ :host => '10.77.112.65:3000'
  }
  ActionMailer::Base.perform_deliveries = true
  ActionMailer::Base.smtp_settings = {
@@ -22,7 +22,7 @@ BidPal::Application.initialize!
  :port                 => "587",
  :domain               => 'persistent.co.in',
  :user_name            => 'ammar_nasikwala@persistent.co.in',
- :password             => 'doll52)(',
+ :password             => 'amitas143..',
  :authentication       => 'login',
  :enable_starttls_auto => true
  }

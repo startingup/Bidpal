@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  length: 1
+  points: 1
+  fl: 1
+  fv: 1
+  together: 1
+  totalpots: 1
+  totalfl: 1
+  totalfv: 1
+  bits: 1
+  loser: 1
+  totalloser: 1
+  control: 1
+  totalcontrol: 1
+  counts: 1
+  totalcounts: 1
+
+two:
+  length: 1
+  points: 1
+  fl: 1
+  fv: 1
+  together: 1
+  totalpots: 1
+  totalfl: 1
+  totalfv: 1
+  bits: 1
+  loser: 1
+  totalloser: 1
+  control: 1
+  totalcontrol: 1
+  counts: 1
+  totalcounts: 1

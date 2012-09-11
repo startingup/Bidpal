@@ -6,8 +6,9 @@ class User < ActiveRecord::Base
    ROLES = %w[admin player author banned]
  
    devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :confirmable, :encryptable
-
-
+    
+   has_and_belongs_to_many :roles  	
+   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_mem
   acts_as_authentic

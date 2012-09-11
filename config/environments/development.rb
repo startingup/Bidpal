@@ -36,7 +36,7 @@ BidPal::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.default_url_options = {
-  :host => '10.77.111.64:3000' 
+  :host => '10.77.112.65:3000' 
   }
   config.action_mailer.delivery_method = :sendmail #:smtp
   config.action_mailer.smtp_settings = {
@@ -44,7 +44,7 @@ BidPal::Application.configure do
   :port => 587,
   :domain               => 'persistent.co.in',
   :user_name            => 'ammar_nasikwala@persistent.co.in',
-  :password             => 'doll52)(',
+  :password             => 'aitas143..',
   :authentication       => 'login',
   :enable_starttls_auto => true
   }

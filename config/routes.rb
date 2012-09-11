@@ -2,6 +2,8 @@
 
 BidPal::Application.routes.draw do
 
+  resources :hand_states
+
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords"}
   devise_scope :user do
 
