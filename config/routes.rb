@@ -4,7 +4,7 @@ BidPal::Application.routes.draw do
 
   resources :hand_states
 
-  devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords"}
+  devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords", :confirmations => "confirmations"}
   devise_scope :user do
 
     root :to => "devise/sessions#new"
@@ -12,7 +12,8 @@ BidPal::Application.routes.draw do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_up", :to => "devise/registrations#new"
 	
-  match 'login' => 'devise/sessions#new', :as => :login
+  #match 'login' => 'devise/sessions#new', :as => :login
+  match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'devise/registrations#new', :as => :logout
   end
 
@@ -80,6 +81,9 @@ BidPal::Application.routes.draw do
   # match 'login' => 'user_sessions#new', :as => :login
   # match 'logout' => 'user_sessions#destroy', :as => :logout
   root :to => "devise/sessions#new"
-  match 'login' => 'devise/sessions#new', :as => :login
+  #match 'login' => 'devise/sessions#new', :as => :login
   match 'logout' => 'devise/registrations#new', :as => :logout
+  
+   match 'login' => 'user_sessions#new', :as => :login
+  # match 'signin' => 'user_sessions#new', :as => :signin
 end

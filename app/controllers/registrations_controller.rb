@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
   #skip_before_filter :require_no_authentication
 
   def new
-    format.html { redirect_to(:users, :notice => 'Welcome to BidPal.') }
+    format.html { redirect_to(:user_sessions, :notice => 'Welcome to BidPal.') }  # changed
   end
   
   def create
@@ -16,7 +16,7 @@ class RegistrationsController < Devise::RegistrationsController
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_in(resource_name, resource)
- 		format.html { redirect_to(:users, :notice => 'Registration successfull.') }
+ 		format.html { redirect_to(:user_sessions, :notice => 'Registration successfull.') }  #changed
 		else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
         expire_session_data_after_sign_in!
