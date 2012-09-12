@@ -13,8 +13,8 @@ BidPal::Application.initialize!
 
  ActionMailer::Base.delivery_method = :smtp
  ActionMailer::Base.default_url_options = {
- #:host => '10.77.112.65:3000'
- :host => 'bidpal.herokuapp.com'
+ :host => '10.77.112.65:3000'
+ #:host => 'bidpal.herokuapp.com'
  }
  ActionMailer::Base.perform_deliveries = true
  ActionMailer::Base.smtp_settings = {
