@@ -2,8 +2,7 @@
 
 BidPal::Application.routes.draw do
 
-  resources :hand_states
-
+  
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords"}
   devise_scope :user do
 
@@ -16,7 +15,7 @@ BidPal::Application.routes.draw do
   match 'logout' => 'devise/registrations#new', :as => :logout
   end
 
-  resources :users, :user_sessions
+  resources :users, :user_sessions, :hand_states
   
 
   
