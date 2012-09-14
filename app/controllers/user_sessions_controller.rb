@@ -14,7 +14,7 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to(:users, :notice => 'Login Successful') }
+        format.html { redirect_to(:hand_states, :notice => 'Login Successful') }
         format.xml { render xml: @user_session, status: :created, :location => @user_session }
       else
         format.html { render action: "new" }

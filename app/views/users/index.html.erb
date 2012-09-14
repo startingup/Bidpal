@@ -1,33 +1,26 @@
+<h1>Listing Players</h1>
+<p id="notice"> <%= notice %></p>
+<table>
+  <tr>
+    <th>Username</th>
+	<th>Email</th>
+    <th></th>
+   
+  </tr>
 
-<br /> <br />
+<% if @user %>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.username %></td>
+	<td><%= user.email %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
 
+<br />
 
-<style type="text/css">
-#div1 {
-    position:absolute;
-    top: 5%;
-    left: 5%;
-    margin-top: 20px; 
-}
-
-#div2 {
-    position:absolute;
-    top: 45%;
-    left: 2%;
-    margin-top: 20px; 
-}
-
-</style>
-
-<div id="div1">
-<h2>Bidplay - Bridge bidding practice site</h2>
-<div/>
-
-
-<div id="div2">
-<%= link_to "Administrator", :admin %>
-<%= link_to "Player", :dealer %>
-<div/>
-
-
-
+<%= link_to 'New User', new_user_path %>

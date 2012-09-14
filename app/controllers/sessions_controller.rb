@@ -9,7 +9,7 @@ class SessionsController < Devise::SessionsController
   def new
     resource = build_resource
     clean_up_passwords(resource)
-    respond_with resource, :location =>  users_path
+    respond_with resource, :location =>  hand_states_path#users_path
   end
   
   def create
