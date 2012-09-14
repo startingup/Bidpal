@@ -15,7 +15,7 @@ class SessionsController < Devise::SessionsController
   def create
     resource = warden.authenticate!(:scope => resource_name, :recall => "user_sessions#new")
     sign_in(resource_name, resource)
-    respond_with resource, :location =>  users_path
+    respond_with resource, :location =>  hand_states_path #users_path
   end
   
    # DELETE /resource/sign_out

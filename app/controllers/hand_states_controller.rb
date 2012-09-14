@@ -80,4 +80,8 @@ class HandStatesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def process_input
+
+  end
 end

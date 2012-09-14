@@ -12,9 +12,8 @@ BidPal::Application.routes.draw do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_up", :to => "devise/registrations#new"
 	
-  #match 'login' => 'devise/sessions#new', :as => :login
   match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'devise/registrations#new', :as => :logout
+  match 'logout' => 'user_sessions#new', :as => :logout
   end
 
   resources :users, :user_sessions
@@ -78,12 +77,12 @@ BidPal::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   # root :to => "user_sessions#new"
-  # match 'login' => 'user_sessions#new', :as => :login
-  # match 'logout' => 'user_sessions#destroy', :as => :logout
+  
   root :to => "devise/sessions#new"
   #match 'login' => 'devise/sessions#new', :as => :login
-  match 'logout' => 'devise/registrations#new', :as => :logout
+  match 'logout' => 'user_sessions#new', :as => :logout
+  match 'login' => 'user_sessions#new', :as => :login
   
-   match 'login' => 'user_sessions#new', :as => :login
-  # match 'signin' => 'user_sessions#new', :as => :signin
-end
+    match 'admin' => 'hand_states#new', :as => :admin
+  match 'dealer' => 'hand_states#new', :as => :dealer
+ end
