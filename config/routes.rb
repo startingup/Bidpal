@@ -76,13 +76,13 @@ BidPal::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  # root :to => "user_sessions#new"
   
   root :to => "devise/sessions#new"
   #match 'login' => 'devise/sessions#new', :as => :login
   match 'logout' => 'user_sessions#new', :as => :logout
   match 'login' => 'user_sessions#new', :as => :login
   
-    match 'admin' => 'hand_states#new', :as => :admin
+  
+  match 'admin' => 'hand_states#new', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
  end
