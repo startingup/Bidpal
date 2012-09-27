@@ -39,7 +39,7 @@ gem "heroku", "~> 2.30.2"
 
 #gem 'dealer', :path => "#{File.expand_path(__FILE__)}/dealer-0.0.1"
 
-#gem "dealer", "~> 0.0.1" , :path => '/dealer-0.0.1'
+gem "dealer", "~> 0.0.1" , :path => '/dealer-0.0.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
