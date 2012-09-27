@@ -37,7 +37,7 @@ gem "cancan", "~> 1.6.8"
 
 gem "heroku", "~> 2.30.2"
 
-gem 'dealer', :path => "#{File.expand_path(__FILE__)}/../tmp/build_1p11drawquo0k/dealer-0.0.1"
+gem 'dealer', :path => "#{File.expand_path(__FILE__)}/../dealer-0.0.1"
 
 #gem "dealer", "~> 0.0.1" , :path => '/dealer-0.0.1'
 
