@@ -37,7 +37,7 @@ gem "cancan", "~> 1.6.8"
 
 gem "heroku", "~> 2.30.2"
 
-gem 'dealer', :path =&gt; "#{File.expand_path(__FILE__)}/BidPal/dealer-0.0.1"
+gem 'dealer', :path => "#{File.expand_path(__FILE__)}/BidPal/dealer-0.0.1"
 
 #gem "dealer", "~> 0.0.1" , :path => '\BidPal\dealer-0.0.1'
 
