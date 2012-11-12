@@ -41,7 +41,7 @@ gem "heroku", "~> 2.30.2"
 #gem 'dealer', :git => 'git://vendor/local_gem/dealer-0.0.1'  
 
 #gem "dealer", "~> 0.0.1", :path => 'vendor/local_gem/dealer-0.0.1.gem'
-gem "dealer", "~> 0.0.1"
+#gem "dealer", "~> 0.0.1"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
