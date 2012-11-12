@@ -64,15 +64,16 @@ BidPal::Application.configure do
   config.active_support.deprecation = :notify
   
   config.action_mailer.default_url_options = {
-  :host => 'bidpal.herokuapp.com' 
+   #:host => 'bidpal.herokuapp.com' 
+   :host => '10.77.112.65:3000' 
   }
-  config.action_mailer.delivery_method = :smtp #:sendmail
+  config.action_mailer.delivery_method = :smtp #:sendmail 
   config.action_mailer.smtp_settings = {
   :address => "mail.persistent.co.in",
   :port => 587,
   :domain               => 'persistent.co.in',
   :user_name            => 'ammar_nasikwala@persistent.co.in',
-  :password             => 'amitas143..',
+  :password             => 'hacked123.',
   :authentication       => 'plain',
   #:enable_starttls_auto => true
   }

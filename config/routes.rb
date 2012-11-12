@@ -83,6 +83,6 @@ BidPal::Application.routes.draw do
   match 'login' => 'user_sessions#new', :as => :login
   
   
-  match 'admin' => 'hand_states#new', :as => :admin
+  match 'admin' => 'hand_states#admin', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
  end

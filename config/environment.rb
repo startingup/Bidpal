@@ -19,11 +19,11 @@ BidPal::Application.initialize!
  ActionMailer::Base.perform_deliveries = true
  ActionMailer::Base.smtp_settings = {
  :enable_starttls_auto => true,
- :address              => "mail.persistent.co.in",
- :port                 => "587",
+ :address => "mail.persistent.co.in",
+ :port => 587,
  :domain               => 'persistent.co.in',
  :user_name            => 'ammar_nasikwala@persistent.co.in',
- :password             => 'amitas143..',
+ :password             => 'hacked123.',
  :authentication       => 'login',
  :enable_starttls_auto => true
  }
