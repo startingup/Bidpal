@@ -1,0 +1,11 @@
+Try this - 
+
+gem 'private_pub'
+
+See this video and apply that steps 
+
+http://railscasts.com/episodes/316-private-pub
+
+Update - One more solution
+
+See Video of Messaging with Faye - Railscast 260. 

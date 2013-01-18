@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.3'
 
 
-gem 'mysql'
+#gem 'mysql'
 gem 'pg', '~>0.13.2'
 
 
@@ -36,6 +36,8 @@ gem "devise-encryptable"
 gem "cancan", "~> 1.6.8"
 
 gem "heroku", "~> 2.30.2"
+
+gem 'private_pub'
 
 #gem 'dealer', :path => "#{File.expand_path(__FILE__)}/../vendor/dealer-0.0.1"
 #gem 'dealer', :git => 'git://vendor/local_gem/dealer-0.0.1'  
