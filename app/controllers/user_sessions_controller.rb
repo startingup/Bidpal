@@ -11,7 +11,7 @@ class UserSessionsController < ApplicationController
   
   def create
     @user_session = UserSession.new(params[:user_session])
-
+	session[:name] = @user_session.username
     respond_to do |format|
       if @user_session.save
         format.html { redirect_to(:hand_states, :notice => 'Login Successful') }

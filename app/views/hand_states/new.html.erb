@@ -1,5 +1,13 @@
 <h1>New hand_state</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', hand_states_path %>
+<table>
+<tr>
+<td>
+<%= button_to "Back", hand_states_path, :method => "get" %>
+</td>
+<td>
+<%= button_to "Go to Bidding", :bidding, :method => "get" %>
+</td>
+</tr>
+</table>

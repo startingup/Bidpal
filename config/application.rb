@@ -43,6 +43,7 @@ module BidPal
 	config.gem "authlogic"
     
 	config.encoding = "utf-8"
+	#config.force_ssl = true
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]

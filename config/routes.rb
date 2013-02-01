@@ -2,21 +2,25 @@
 
 BidPal::Application.routes.draw do
 
-  resources :hand_states
-
+	
+    resources :chat_messages do
+		member do
+			get :users
+		end
+	end	
   devise_for :users, :controllers => { :registrations => "registrations", :sessions => "sessions", :passwords => "passwords", :confirmations => "confirmations"}
   devise_scope :user do
 
-    root :to => "devise/sessions#new"
-	#root :to => "user_sessions#new"
+    #root :to => "devise/sessions#new"
+	root :to => "user_sessions#new"			#default page, or first screen of the website
     get "sign_in", :to => "devise/sessions#new"
     get "sign_up", :to => "devise/registrations#new"
 	
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#new', :as => :logout
   end
-
-  resources :users, :user_sessions
+  
+  resources :users, :user_sessions, :hand_states
   
 
   
@@ -69,7 +73,7 @@ BidPal::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  #root :to => 'user_sessions#new'
 
   # See how all your routes lay out with "rake routes"
 
@@ -77,7 +81,7 @@ BidPal::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   
-  root :to => "devise/sessions#new"
+
   #match 'login' => 'devise/sessions#new', :as => :login
   match 'logout' => 'user_sessions#new', :as => :logout
   match 'login' => 'user_sessions#new', :as => :login
@@ -85,4 +89,5 @@ BidPal::Application.routes.draw do
   
   match 'admin' => 'hand_states#admin', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
+  match 'bidding' => 'chat_messages#index', :as => :bidding
  end

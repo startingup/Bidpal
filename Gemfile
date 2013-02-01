@@ -37,7 +37,9 @@ gem "cancan", "~> 1.6.8"
 
 gem "heroku", "~> 2.30.2"
 
-gem 'private_pub'
+gem 'rolify'
+
+#gem 'private_pub'
 
 #gem 'dealer', :path => "#{File.expand_path(__FILE__)}/../vendor/dealer-0.0.1"
 #gem 'dealer', :git => 'git://vendor/local_gem/dealer-0.0.1'  

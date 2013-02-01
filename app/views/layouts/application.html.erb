@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="nav">
+<div id="nav" align="right">
 <% if current_user %>
+
 	<%= link_to "Edit Profile", edit_user_path(current_user.id)%>
 	<%= link_to "Signup", new_user_path %> |
 	<%= link_to "Signout", :logout %>
@@ -17,6 +18,7 @@
          <%= link_to "Signin", :login %>
 <% end %>
     </div>
+	
 <%= yield %>
 
 

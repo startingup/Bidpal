@@ -1,6 +1,6 @@
 body {
-  background-color: #63D1F4;
-  color: #454545;
+  background-color: #fff;
+  color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -19,15 +19,27 @@ pre {
 }
 
 a {
-  color: #454545;
+  color: #000;
   &:visited {
-    color: #4B0082;
+    color: #666;
   }
   &:hover {
-    color: #00FFFF;
-    background-color: #63D1F4;
+    color: #fff;
+    background-color: #000;
   }
 }
+
+      .editable {
+        border-top-width : 1px;
+        border-right-width : 1px;
+        border-bottom-width : 1px;
+        border-left-width : 1px;
+        border-style  : solid;
+        width:350px;
+        height:200px;
+        overflow:scroll;
+        overflow-x:hidden;
+        }
 
 div {
   &.field, &.actions {
@@ -36,7 +48,7 @@ div {
 }
 
 #notice {
-  color: #551A8B;
+  color: green;
 }
 
 .field_with_errors {
