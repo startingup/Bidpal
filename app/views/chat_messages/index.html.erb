@@ -1,4 +1,3 @@
-
 <table>
 <tr>
 	<td>
@@ -14,13 +13,10 @@
 
 </tr>
 </table>
-
-
 	<div id="TextEdit" class="editable">
 	<table width = "320" style="table-layout:fixed" >
     <% if @chat_message %>
 	<% @chat_messages.each do |chat_message| %>
-	
 	<tr>
 	 <td><%= chat_message.name %></td>
 	 <td align = right><div style="word-wrap: break-word;"><%= chat_message.message %></div></td>	
@@ -32,8 +28,14 @@
 	</table>
 </div>
 
+<script type="text/javascript">
+			setTimeout(function() {Ajax();}, 10000);
+</script>
 
+
+ 
 <%= render 'form' %>
 
+ 
 <br />
 <%= button_to "Back", hand_states_path, :method => "get" %>

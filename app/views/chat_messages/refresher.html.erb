@@ -1,0 +1,14 @@
+<div id="TextEdit">
+	<table width = "320" style="table-layout:fixed" >
+    <% if @chat_message %>
+	<% @chat_messages.each do |chat_message| %>
+	<tr>
+	 <td><%= chat_message.name %></td>
+	 <td align = right><div style="word-wrap: break-word;"><%= chat_message.message %></div></td>	
+	</tr>
+	<br />
+
+	<% end %>
+	<% end %>
+	</table>
+</div>

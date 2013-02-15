@@ -3,8 +3,46 @@
 <head>
   <title>BidPal</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>	
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+  <%= javascript_include_tag 'rails' %>
+  <%= javascript_include_tag 'rails' %>
+  
+  <script type="text/javascript">
+
+			function Ajax()
+			{
+				var
+					$http,
+					$self = arguments.callee;
+
+				if (window.XMLHttpRequest) {
+					$http = new XMLHttpRequest();
+				} else if (window.ActiveXObject) {
+					try {
+						$http = new ActiveXObject('Msxml2.XMLHTTP');
+					} catch(e) {
+						$http = new ActiveXObject('Microsoft.XMLHTTP');
+					}
+				}
+
+				if ($http) {
+					$http.onreadystatechange = function()
+					{
+						if (/4|^complete$/.test($http.readyState)) {
+							document.getElementById('TextEdit').innerHTML = $http.responseText;
+							setTimeout(function(){$self();}, 10000);
+						}
+					};
+					$http.open('GET', 'http://localhost:3000/refreshing' + '?' + new Date().getTime(), true);
+					$http.send(null);
+				}
+
+			}
+
+		</script>
+
+
+
 </head>
 <body>
 <div id="nav" align="right">
@@ -14,8 +52,7 @@
 	<%= link_to "Signup", new_user_path %> |
 	<%= link_to "Signout", :logout %>
 <% else %>
-        <%= link_to "Signup", new_user_path %> |
-         <%= link_to "Signin", :login %>
+      <%= link_to "Singnout", :logout %>
 <% end %>
     </div>
 	

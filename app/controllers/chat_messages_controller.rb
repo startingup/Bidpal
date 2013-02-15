@@ -12,6 +12,16 @@ class ChatMessagesController < ApplicationController
     end
   end
 
+   def refresher
+	 @chat_messages = ChatMessage.all
+	 @chat_message = ChatMessage.new
+	  #@user = User.find(34)
+      respond_to do |format|
+      format.html 
+      format.json { render json: @chat_messages }
+    end
+  end
+  
   # GET /chat_messages/1
   # GET /chat_messages/1.json
   def show
