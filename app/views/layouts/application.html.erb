@@ -52,7 +52,8 @@
 	<%= link_to "Signup", new_user_path %> |
 	<%= link_to "Signout", :logout %>
 <% else %>
-      <%= link_to "Singnout", :logout %>
+      <%= link_to "Singnup", new_user_path %>
+	  <%= link_to "Signin", :login %>
 <% end %>
     </div>
 	
