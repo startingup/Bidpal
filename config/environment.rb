@@ -25,5 +25,5 @@ BidPal::Application.initialize!
  :user_name            => 'ammar_nasikwala@persistent.co.in',
  :password             => 'lockedout963.',
  :authentication       => 'login',
- #:enable_starttls_auto => true
+ :enable_starttls_auto => true
  }
