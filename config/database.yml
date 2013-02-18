@@ -13,7 +13,7 @@ development:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: BidPal_app_dev
+  database: BidPal_development
   #database: BidPal_development_new
   pool: 5
   username: postgres	#root
@@ -28,7 +28,7 @@ test:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: BidPal_app_test
+  database: BidPal_test
   #database: BidPal_test_new
   pool: 5
   username: postgres
@@ -40,7 +40,7 @@ production:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: BidPal_app_production
+  database: BidPal_production
   #database: BidPal_production_new
   pool: 5
   username: postgres
