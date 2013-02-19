@@ -43,6 +43,6 @@ production:
   database: BidPal_production
   #database: BidPal_production_new
   pool: 5
-  username: postgres
-  password: ps7153!@#
-  host: localhost
+  username: xbvgqpszywnejr
+  password: lL_I461CPFBkBNnbAqWVRCtvMK
+  host: ec2-107-21-120-175.compute-1.amazonaws.com:5432
