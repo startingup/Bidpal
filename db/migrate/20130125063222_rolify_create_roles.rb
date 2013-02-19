@@ -1,5 +1,5 @@
 class RolifyCreateRoles < ActiveRecord::Migration
- 
+  def change
     create_table(:users_roles, :id => false) do |t|
       t.references :user
       t.references :role
