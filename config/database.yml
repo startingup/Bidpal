@@ -40,7 +40,8 @@ production:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: BidPal_production
+  database: dv2jeqnc9v0ls		
+  #BidPal_production
   #database: BidPal_production_new
   pool: 5
   username: xbvgqpszywnejr
