@@ -45,7 +45,7 @@ def create
     respond_to do |format|
       if @user.save
 		MyMailer.welcome_email(@user).deliver 
-        format.html { redirect_to(:users, :notice => 'Registration successfull.') }
+        format.html { redirect_to(:user_sessions, :notice => 'Registration successfull.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
