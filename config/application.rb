@@ -38,7 +38,7 @@ module BidPal
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     #DataMapper::setup(:default, ENV['DATABASE_URL'] || "postgres://postgres:ps7153!@#@ps7153/BidPal_production")
-	DataMapper::setup(:default, ENV['DATABASE_URL'] || "postgres://xbvgqpszywnejr:lL_I461CPFBkBNnbAqWVRCtvMK@ec2-107-21-120-175.compute-1.amazonaws.com:5432/dv2jeqnc9v0ls")
+	DataMapper::setup(:default, "postgres://xbvgqpszywnejr:lL_I461CPFBkBNnbAqWVRCtvMK@ec2-107-21-120-175.compute-1.amazonaws.com:5432/dv2jeqnc9v0ls")
 	
 	config.gem "authlogic"
     
