@@ -17,7 +17,6 @@ class CreateHandStates < ActiveRecord::Migration
       t.integer :totalcontrol
       t.integer :counts
       t.integer :totalcounts
-
       t.timestamps
     end
   end

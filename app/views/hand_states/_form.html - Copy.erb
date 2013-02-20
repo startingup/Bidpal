@@ -1,0 +1,63 @@
+<%= form_for(@hand_state) do |f| %>
+  <% if @hand_state.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hand_state.errors.count, "error") %> prohibited this hand_state from being saved:</h2>
+
+      <ul>
+      <% @hand_state.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <div class="field">
+    <%= f.label :length %><br />
+    <%= f.number_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br />
+    <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :fl %><br />
+    <%= f.number_field :fl %>
+  </div>
+  <div class="field">
+    <%= f.label :fv %><br />
+    <%= f.number_field :fv %>
+  </div>
+  <div class="field">
+    <%= f.label :together %><br />
+    <%= f.number_field :together %>
+  </div>
+
+  <div class="field">
+    <%= f.label :loser %><br />
+    <%= f.number_field :loser %>
+  </div>
+  <div class="field">
+    <%= f.label :totalloser %><br />
+    <%= f.number_field :totalloser %>
+  </div>
+  <div class="field">
+    <%= f.label :control %><br />
+    <%= f.number_field :control %>
+  </div>
+  <div class="field">
+    <%= f.label :totalcontrol %><br />
+    <%= f.number_field :totalcontrol %>
+  </div>
+  <div class="field">
+    <%= f.label :counts %><br />
+    <%= f.number_field :counts %>
+  </div>
+  <div class="field">
+    <%= f.label :totalcounts %><br />
+    <%= f.number_field :totalcounts %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
