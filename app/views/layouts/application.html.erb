@@ -5,7 +5,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>	
   <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
   <%= javascript_include_tag 'rails' %>
-  <%= javascript_include_tag 'rails' %>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> 
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+
   
   <script type="text/javascript">
 
@@ -38,18 +42,31 @@
 				}
 
 			}
-
-		</script>
-
-
+			$(function() {    $( "table td" ).draggable({
+				appendTo: "body",
+				helper: "clone"
+			});
+			$( "#droppable" ).droppable({
+				activeClass: "ui-state-default",      
+				hoverClass: "ui-state-hover",      
+				accept: ":not(.ui-sortable-helper)",
+				  drop: function( event, ui ) {
+				  
+				      $( this ).find( ".placeholder" ).remove();
+				      $( "<li></li>"  ).text( ui.draggable.text() ).appendTo( this );      
+				  } 
+				         
+			});
+			});
+			
+	</script>
 
 </head>
+
 <body>
 <div id="nav" align="right">
 <% if current_user %>
-
 	<%= link_to "Edit Profile", edit_user_path(current_user.id)%>
-	<%= link_to "Signup", new_user_path %> |
 	<%= link_to "Signout", :logout %>
 <% else %>
       <%= link_to "Singnup", new_user_path %>
@@ -58,7 +75,6 @@
     </div>
 	
 <%= yield %>
-
 
 </body>
 </html>

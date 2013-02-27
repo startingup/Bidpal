@@ -10,54 +10,52 @@
       </ul>
     </div>
   <% end %>
-  
 
-  <div class="field">
-    <%= f.label :length %><br />
-    <%= f.number_field :length %>
-  </div>
-  <div class="field">
-    <%= f.label :points %><br />
-    <%= f.number_field :points %>
-  </div>
-  <div class="field">
-    <%= f.label :fl %><br />
-    <%= f.number_field :fl %>
-  </div>
-  <div class="field">
-    <%= f.label :fv %><br />
-    <%= f.number_field :fv %>
-  </div>
-  <div class="field">
-    <%= f.label :together %><br />
-    <%= f.number_field :together %>
-  </div>
+<div id="box">
+<table border="1" cellpadding="10"> 
+		
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">AND</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">OR</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">></p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center"><</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">>=</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center"><=</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">=</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">!=</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">HCP</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">SHAPE</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">CLUBS</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">DIAMONDS</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">SPADES</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">HEARTS</p></div></td>
+	</tr>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">+</p></div></td>
+		<td><div id="draggable" class="ui-widget-header">  <p align="center">-</p></div></td>
+	</tr>
+	
+</table>
+</div>
+<div id="droppable" class="ui-widget-header">  <p>Expression</p></div>
 
-  <div class="field">
-    <%= f.label :loser %><br />
-    <%= f.number_field :loser %>
-  </div>
-  <div class="field">
-    <%= f.label :totalloser %><br />
-    <%= f.number_field :totalloser %>
-  </div>
-  <div class="field">
-    <%= f.label :control %><br />
-    <%= f.number_field :control %>
-  </div>
-  <div class="field">
-    <%= f.label :totalcontrol %><br />
-    <%= f.number_field :totalcontrol %>
-  </div>
-  <div class="field">
-    <%= f.label :counts %><br />
-    <%= f.number_field :counts %>
-  </div>
-  <div class="field">
-    <%= f.label :totalcounts %><br />
-    <%= f.number_field :totalcounts %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

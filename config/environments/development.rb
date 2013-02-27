@@ -36,7 +36,7 @@ BidPal::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.default_url_options = {
-  :host => '10.77.112.65:3000' 
+  :host => 'localhost:3000' 
   }
   config.action_mailer.delivery_method = :sendmail #:smtp
   config.action_mailer.smtp_settings = {
