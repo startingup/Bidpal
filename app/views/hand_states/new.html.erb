@@ -1,11 +1,17 @@
-<h1>New hand_state</h1>
+<div id="nav" align="right">
+	<%= link_to "Signout", :logout %>
+</div>
 
+<h1>New hand_state</h1>
 <%= render 'form' %>
 <br><br /><br><br /><br><br /><br><br />
 <table>
 <tr>
 <td>
 <%= button_to "Back", hand_states_path, :method => "get" %>
+</td>
+<td>
+<%= button_to "Generate Deal", hand_states_path, :method => "get" %>
 </td>
 <td>
 <%= button_to "Go to Bidding", :bidding, :method => "get" %>

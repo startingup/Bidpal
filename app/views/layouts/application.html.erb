@@ -64,15 +64,6 @@
 </head>
 
 <body>
-<div id="nav" align="right">
-<% if current_user %>
-	<%= link_to "Edit Profile", edit_user_path(current_user.id)%>
-	<%= link_to "Signout", :logout %>
-<% else %>
-      <%= link_to "Singnup", new_user_path %>
-	  <%= link_to "Signin", :login %>
-<% end %>
-    </div>
 	
 <%= yield %>
 
