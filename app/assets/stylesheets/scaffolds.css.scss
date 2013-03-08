@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #f1f0f1;
+  color: #088da5;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -29,19 +29,19 @@ table, tr, td {
              }
  
 pre {
-  background-color: #eee;
+  background-color: #088da5;
   padding: 10px;
   font-size: 11px;
 }
 
 a {
-  color: #000;
+  color: #088da5;
   &:visited {
-    color: #666;
+    color: #088da5;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #c5886e;
+    background-color: #f1f0f1;
   }
 }
 
@@ -56,6 +56,11 @@ a {
         overflow:scroll;
         overflow-x:hidden;
         }
+
+img {
+ box-shadow: 10px 10px 5px #888888;
+ } 
+
 
 div {
   &.field, &.actions {
