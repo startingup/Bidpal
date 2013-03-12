@@ -22,6 +22,10 @@ table, tr, td {
   border: 1px solid black;
   width: 280px; 
 }
+
+.hiddentext {
+   display: none;
+}
  
  
  li { display: inline; 
@@ -70,6 +74,8 @@ div {
 
 #draggable { width: 100px; height: 25px; padding: 0.5em; }
 #droppable { width: 600px; height: 100px; padding: 0.5em; float: left; margin: 10px; }
+
+
 
 #notice {
   color: green;

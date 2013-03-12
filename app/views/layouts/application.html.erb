@@ -42,6 +42,22 @@
 				}
 
 			}
+			
+			var divID = "droppable";
+ 
+			function EditDiv() {
+			 
+			var divObject = document.getElementById(divID);
+			 
+			divObject.contentEditable = 'true';
+			 
+			divObject.designMode = 'on';
+			 
+			void 0;
+			 
+			}
+
+			
 			$(function() {    $( "table td" ).draggable({
 				appendTo: "body",
 				helper: "clone"
@@ -63,7 +79,7 @@
 
 </head>
 
-<body>
+<body onmousemove="return EditDiv()">
 	
 <%= yield %>
 
