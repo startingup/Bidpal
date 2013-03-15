@@ -14,6 +14,15 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_mem
   acts_as_authentic
-  attr_accessible :name, :username, :password, :password_confirmation, :email, :role, :reset_password_token  
+  attr_accessible :name, :username, :password, :password_confirmation, :email, :role, :current_sign_in_at, :last_sign_out_at, :reset_password_token  
+  
+  #def online?
+   # if current_sign_in_at.present? 
+    #  last_sign_out_at.present? ? current_sign_in_at > last_sign_out_at : true
+    #else
+     # false
+    #end
+ # end
+
   
 end

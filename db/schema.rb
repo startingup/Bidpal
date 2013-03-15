@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220114707) do
+ActiveRecord::Schema.define(:version => 20130313093211) do
 
   create_table "chat_messages", :force => true do |t|
     t.string   "name"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20130220114707) do
     t.string   "role"
     t.string   "name"
     t.string   "email"
+    t.datetime "last_sign_out_at"
   end
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true

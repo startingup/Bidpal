@@ -3,8 +3,8 @@ class ChatMessagesController < ApplicationController
   # GET /chat_messages.json
   def index
     @chat_messages = ChatMessage.all
-	 @chat_message = ChatMessage.new
-	 
+	  @chat_message = ChatMessage.new
+	 @users = User.find(:all, :conditions => ["current_sign_in_at > last_sign_out_at ?","true"])
 	  #@user = User.find(34)
       respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +16,7 @@ class ChatMessagesController < ApplicationController
 	 @chat_messages = ChatMessage.all
 	 @chat_message = ChatMessage.new
 	  #@user = User.find(34)
+	  
       respond_to do |format|
       format.html 
       format.json { render json: @chat_messages }
