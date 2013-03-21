@@ -67,6 +67,18 @@ a {
         overflow:scroll;
         overflow-x:hidden;
         }
+        
+          .editable2 {
+        border-top-width : 1px;
+        border-right-width : 1px;
+        border-bottom-width : 1px;
+        border-left-width : 1px;
+        border-style  : solid;
+        width:120px;
+        height:200px;
+        overflow:scroll;
+        overflow-x:hidden;
+        }
 
 img {
  box-shadow: 10px 10px 5px #888888;
@@ -81,6 +93,7 @@ div {
 
 #draggable { width: 100px; height: 25px; padding: 0.5em; }
 #droppable { width: 600px; height: 100px; padding: 0.5em; float: left; margin: 10px; }
+#dropme {}
 
 #footer {
  

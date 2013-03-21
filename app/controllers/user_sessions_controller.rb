@@ -27,7 +27,8 @@ class UserSessionsController < ApplicationController
   def destroy
     @user_session = UserSession.find
     @user_session.destroy
-
+    
+    
     respond_to do |format|
       format.html { redirect_to(:users, :notice => 'GoodBye!') }
 	  flash[:notice] = "good bye"

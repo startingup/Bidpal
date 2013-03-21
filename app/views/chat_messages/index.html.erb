@@ -1,3 +1,7 @@
+<div id="nav" align="right">
+	<%= link_to "Signout", :logout %>
+</div>
+
 <table>
 <tr>
 	<td>
@@ -13,33 +17,54 @@
 
 </tr>
 </table>
-	<div id="TextEdit" class="editable">
-	<table width = "320" style="table-layout:fixed" >
-    <% if @chat_message %>
-	<% @chat_messages.each do |chat_message| %>
-	<tr>
-	 <td><%= chat_message.name %></td>
-	 <td align = right><div style="word-wrap: break-word;"><%= chat_message.message %></div></td>	
-	</tr>
-	<br />
 
-	<% end %>
-	<% end %>
-	</table>
-</div>
+<table>
+	<tr>
+		<td>
+			<div class="editable2">
+				<table width = "100" style="table-layout:fixed" >
+					<% if @user %>
+					<% @users.each do |user| %>
+					<tr>
+						
+						<td>
+						<%= user.username %>
+						</td>
+						<td>
+							
+						</td>
+					</tr> 
+					<% end %>
+					<% end %>
+				</table>
+			</div>
+		</td>
+		
+		<td>
+			
+		<div id="TextEdit" class="editable">
+			<table width = "320" style="table-layout:fixed" >
+				    <% if @chat_message %>
+						<% @chat_messages.each do |chat_message| %>
+							<tr>
+							 <td><%= chat_message.name %></td>
+							 <td align = right><div style="word-wrap: break-word;"><%= chat_message.message %></div></td>	
+							</tr>		
+						<% end %>
+					<% end %>
+				</table>
+		</div>
+	</td>
+ </tr>
+</table>
+
 
 <script type="text/javascript">
 			setTimeout(function() {Ajax();}, 10000);
 </script>
  
 <%= render 'form' %>
-
 <br />
 
-<% if @user %>
-<% @users.each do |user| %>
-  <%= user.username %>
-<% end %>
-<% end %>
 
 <%= button_to "Back", hand_states_path, :method => "get" %>

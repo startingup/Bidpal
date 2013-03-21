@@ -4,7 +4,11 @@ class ChatMessagesController < ApplicationController
   def index
     @chat_messages = ChatMessage.all
 	  @chat_message = ChatMessage.new
-	 @users = User.find(:all, :conditions => ["current_sign_in_at > last_sign_out_at ?","true"])
+	  #@users = User.find(:all, :conditions => ["current_sign_in_at > last_request_at =?" , true])
+	  @users = User.where("current_sign_in_at < last_request_at")
+	  @user = User.new
+
+	  #@users = User.logged_in.all
 	  #@user = User.find(34)
       respond_to do |format|
       format.html # index.html.erb
