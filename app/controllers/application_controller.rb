@@ -22,4 +22,8 @@ rescue_from CanCan::AccessDenied do |exception|
   redirect_to root_url
 end
 
+def current_user
+ return @current_user ||= session[:current_user_id] && User.find(session[:current_user_id])
+end
+
 end

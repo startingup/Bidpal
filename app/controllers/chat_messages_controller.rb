@@ -5,7 +5,7 @@ class ChatMessagesController < ApplicationController
     @chat_messages = ChatMessage.all
 	  @chat_message = ChatMessage.new
 	  #@users = User.find(:all, :conditions => ["current_sign_in_at > last_request_at =?" , true])
-	  @users = User.where("current_sign_in_at < last_request_at")
+	  @users = User.where("last_request_at > :Time", :Time => Time.now - 5000)
 	  @user = User.new
 
 	  #@users = User.logged_in.all

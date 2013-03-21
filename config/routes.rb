@@ -17,7 +17,7 @@ BidPal::Application.routes.draw do
     get "sign_up", :to => "devise/registrations#new"
 	
   match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#new', :as => :logout
+  match 'logout' => 'user_sessions#destroy', :as => :logout
   end
   
   resources :users, :user_sessions, :hand_states
@@ -83,13 +83,13 @@ BidPal::Application.routes.draw do
   
 
   #match 'login' => 'devise/sessions#new', :as => :login
-  match 'logout' => 'user_sessions#new', :as => :logout
+  match 'logout' => 'user_sessions#destroy', :as => :logout
   match 'login' => 'user_sessions#new', :as => :login
   
   
   match 'admin' => 'hand_states#admin', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
- match 'bidding' => 'chat_messages#index', :as => :bidding
+  match 'bidding' => 'chat_messages#index', :as => :bidding
   #match 'bidding' => 'chat_messages#bidding', :as => :bidding
   match 'refreshing' => 'chat_messages#refresher', :as => :refreshing
  end

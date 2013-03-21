@@ -11,18 +11,13 @@
     </div>
   <% end %>
 
-  <table>
-  <tr>
-	<td>
-	
-	</td>
-	<td>
+ 
 	<table cellspacing = 3>
 	<tr>
 	<td>
 	 <div class="field">
-	<%= f.hidden_field :name, :value => session[:name] %>
-	 <%= f.text_field :message, :size => 35 %>
+	 <%= f.hidden_field :name, :value => session[:name] %>
+	 <%= f.text_field :message, :size => 42 %>
   </div>
   </td>
    <td>
@@ -32,12 +27,7 @@
 	</td>
 	</tr>
 	</table>
-	</td>
-	<td>
 	
-	</td>
-</tr>
-  </table>
    
 
 <% end %>

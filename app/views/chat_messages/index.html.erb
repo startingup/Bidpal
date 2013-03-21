@@ -2,44 +2,37 @@
 	<%= link_to "Signout", :logout %>
 </div>
 
-<table>
-<tr>
-	<td>
-	</td>
-	<td>
-	<h2> Chatter box </h2>
-	</td>
-	<td>
-	</td>
-</tr>
-
-<tr>
-
-</tr>
-</table>
 
 <table>
+	<tr>
+		<td>
+			<h2> Online Users </h2>
+		</td>
+		<td>
+			<h2> Chatter box </h2>
+		</td>
+			
+	</tr>
+	
 	<tr>
 		<td>
 			<div class="editable2">
 				<table width = "100" style="table-layout:fixed" >
 					<% if @user %>
 					<% @users.each do |user| %>
-					<tr>
-						
+					<tr>						
 						<td>
 						<%= user.username %>
 						</td>
 						<td>
-							
-						</td>
+							</td>
 					</tr> 
 					<% end %>
 					<% end %>
 				</table>
 			</div>
 		</td>
-		
+			
 		<td>
 			
 		<div id="TextEdit" class="editable">
@@ -52,19 +45,35 @@
 							</tr>		
 						<% end %>
 					<% end %>
+					
 				</table>
 		</div>
 	</td>
  </tr>
+ 
+ <tr>
+ 	<td>
+ 		<table>
+ 			<tr>
+ 				<td>
+ 					<%= button_to "Back", :dealer, :method => "get" %>
+ 				</td>
+ 				<td>
+ 					<%= button_to "Home", hand_states_path, :method => "get" %>
+ 				</td>
+ 			</tr>
+		</table> 					
+ 	</td>
+ 	<td>
+ 		<script type="text/javascript">
+			setTimeout(function() {Ajax();}, 30000);
+		</script>
+ 
+		<%= render 'form' %>
+
+ 	</td>
+ </tr>
 </table>
 
 
-<script type="text/javascript">
-			setTimeout(function() {Ajax();}, 10000);
-</script>
- 
-<%= render 'form' %>
-<br />
 
-
-<%= button_to "Back", hand_states_path, :method => "get" %>

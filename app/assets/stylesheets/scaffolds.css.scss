@@ -21,8 +21,8 @@ p, ol, ul, td {
 
 table, tr, td {
   border: 1px;
-  padding: 5px;
-  border-spacing: 5px;
+  padding: 2px;
+  border-spacing: 2px;
 }
 
 #box{
@@ -66,6 +66,7 @@ a {
         height:200px;
         overflow:scroll;
         overflow-x:hidden;
+        background-color: white;
         }
         
           .editable2 {
@@ -78,11 +79,10 @@ a {
         height:200px;
         overflow:scroll;
         overflow-x:hidden;
+        background-color: white;
+
         }
 
-img {
- box-shadow: 10px 10px 5px #888888;
- } 
 
 
 div {

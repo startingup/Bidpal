@@ -27,12 +27,13 @@ class UserSessionsController < ApplicationController
   def destroy
     @user_session = UserSession.find
     @user_session.destroy
-    
-    
+    #@user = User.find(current_user_id)
+    #@user.update_attribute(:last_sign_out_at, Time.now)
     respond_to do |format|
-      format.html { redirect_to(:users, :notice => 'GoodBye!') }
-	  flash[:notice] = "good bye"
+      format.html { redirect_to(:login, :notice => 'GoodBye!') }
+      flash[:notice] = "good bye"
       format.xml { head :ok }
     end
   end
+
 end
