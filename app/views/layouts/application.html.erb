@@ -43,36 +43,132 @@
 
 			}
 			
-			var divID = "droppable";
+			function getTopPos(el) {
+			var elmObj = document.getElementById(el);
+			
+		    for (var topPos = 0; elmObj != null; topPos += elmObj.offsetTop)
+		    { 
+		    	elmObj = elmObj.offsetParent; 
+		    }
+		        
+		    return topPos;
+			}
+			
+			function getLeftPos(el) {
+				var elmObj = document.getElementById(el);
+				
+			    for (var leftPos = 0; elmObj != null; leftPos += elmObj.offsetLeft)
+			        {
+			        	elmObj = elmObj.offsetParent;
+			        } 
+			    return leftPos;
+			}
+	
+			
  
 			function EditDiv() {
+			var div1ID = "grid";
+			var div2ID = "left";
+			var div3ID = "right";
+			for (var i=0; i<count ; i++ )
+			{
+				div1ID = div1ID + i;
+				div2ID = div2ID + i;
+				div3ID = div3ID + i;
+				
+				var div1Object = document.getElementById(div1ID);
+			 	div1Object.contentEditable = 'true';
+			 	div1Object.designMode = 'on';
+			 	
+			 	var div2Object = document.getElementById(div2ID);
+			 	div2Object.contentEditable = 'true';
+			 	div2Object.designMode = 'on';
+			 	
+			 	var div3Object = document.getElementById(div3ID);
+			 	div3Object.contentEditable = 'true';
+			 	div3Object.designMode = 'on';
+			} 
+			var divID = "root tr td";
+		
+			 var divObject = document.getElementById(divID);
+			 divObject.contentEditable = 'true';
+			 divObject.designMode = 'on';
 			 
-			var divObject = document.getElementById(divID);
-			 
-			divObject.contentEditable = 'true';
-			 
-			divObject.designMode = 'on';
-			 
-			void 0;
-			 
+			void 0;					
 			}
-
+			
+			
+			var count = 0;
+			var tdLeft = "#left0";
+			var tdRight = "#right0";
+			var tID ="grid0";
+			var Droppable = "#grid tr td";
+			var rowTab = "#grid0";
+			var tdTab = rowTab + " tr";	
+			
 			
 			$(function() {    $( "#table-1 td" ).draggable({
 				appendTo: "body",
 				helper: "clone"
 			});
-			$( "#droppable" ).droppable({
-				activeClass: "ui-state-default",      
-				hoverClass: "ui-state-hover",      
-				accept: ":not(.ui-sortable-helper)",
-				  drop: function( event, ui ) {
-				  
-				      $( this ).find( ".placeholder" ).remove();
-				      $( "<li></li>"  ).text( ui.draggable.text() ).appendTo( this );      
-				  } 
-				         
-			});
+				   	
+			$( Droppable ).droppable({
+				   
+					activeClass: "ui-state-default",      
+					hoverClass: "ui-state-hover",      
+					accept: ":not(.ui-sortable-helper)",
+					drop: function( event, ui ) {
+						
+					$( Droppable ).find( ".placeholder" ).remove();
+				 	$( "<table id='" + tID + "' width='90%' height='190' border='2'></table>"  ).appendTo( Droppable );			
+					$( "<tr></tr>"  ).appendTo( rowTab );
+				  	$( "<td id='" + tdLeft + "'></td>"  ).appendTo( tdTab );  
+				    $( "<td></td>"  ).text( ui.draggable.text() ).appendTo( tdTab );     
+				    $( "<td id='" + tdRight + "'></td>"  ).appendTo( tdTab );
+
+				    	
+						
+			  		count = count + 1;
+		  			tID = "grid" + count;
+					tbLeft = "#left" + count;
+					tbRight = "#right" + count;
+					rowTab = "#grid" + count;
+					tbTab = rowTab + " tr";
+					
+				 		
+				 	
+				 	if(count > 0)
+				 	{
+			  			var lTab = "";
+			  			var rtab = "";
+			  			
+			  			for(var i= 0; i < count; i++  )
+						{
+						    var e = window.event;
+						    
+							var x= 0;
+							var y = 0;
+							document.onmousemove = function(e){
+    							x = e.pageX;
+    							y = e.pageY;
+							}
+							
+							lTab = tbLeft + i;
+							rTab = tbRight + i;								
+							if ((x > getLeftPos(lTab) && x <= x + (lTab).innerWidth) && (y > getTopPos(lTab) && y <= y + (lTab).innerHeight))
+							{
+								Droppable = lTab;
+							}
+							else if ((x > getLeftPos(rTab) && x <= x + (rTab).innerWidth) && (y > getTopPos(rTab) && y <= y + (rTab).innerHeight) )
+							{
+								Droppable = rTab;
+							}
+						}
+			  		}
+			  		Droppable = "#left0";
+			  		}        
+				});
+					
 			});
 			
 	</script>

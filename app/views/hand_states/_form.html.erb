@@ -12,49 +12,50 @@
   <% end %>
 
 <div id="box">
-<table id="table-1" border="1" cellpadding="10"> 
+<table id="table-1" cellpadding="10"> 
 		
 	<tr>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span><p align="center" >AND</p><span class="hiddentext">...)</span></div></td>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span><p align="center">OR</p><span class="hiddentext">...)</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center" >AND</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">OR</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center">+</p><span class="hiddentext">...)</span></div></td>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center">-</p><span class="hiddentext">...)</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">+</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">-</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span><p align="center">></p><span class="hiddentext">...)</span></div></td>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center"><</p><span class="hiddentext">...)</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">></p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center"><</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center">>=</p><span class="hiddentext">...)</span></div></td>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center"><=</p><span class="hiddentext">...)</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">>=</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center"><=</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center">=</p><span class="hiddentext">...)</span></div></td>
-		<td><div id="draggable" class="ui-widget-header"> <span class="hiddentext">(...</span> <p align="center">!=</p><span class="hiddentext">...)</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">=</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">!=</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header">  <p align="center">HCP</p><span class="hiddentext">()</span></div></td>
-		<td><div id="draggable" class="ui-widget-header">  <p align="center">SHAPE</p><span class="hiddentext">()</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">HCP</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">SHAPE</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header">  <p align="center">CLUBS</p><span class="hiddentext">()</span></div></td>
-		<td><div id="draggable" class="ui-widget-header">  <p align="center">DIAMONDS</p><span class="hiddentext">()</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">CLUBS</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">DIAMONDS</p></div></td>
 	</tr>
 	
 	<tr>
-		<td><div id="draggable" class="ui-widget-header">  <p align="center">SPADES</p><span class="hiddentext">()</span></div></td>
-		<td><div id="draggable" class="ui-widget-header">  <p align="center">HEARTS</p><span class="hiddentext">()</span></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">SPADES</p></div></td>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">HEARTS</p></div></td>
 	</tr>
-		<tr>
-		<td><div id="draggable" class="ui-widget-header"> <p align="center">ANY</p><span class="hiddentext">(...)</span></div></td>
+	
+	<tr>
+		<td><div id="draggable" class="ui-widget-header"> <p align="center">ANY</p></div></td>
 		<td><div id="draggable" class="ui-widget-header"> <p align="center">()</p></div></td>
 	</tr>
 	
@@ -62,7 +63,17 @@
 	
 </table>
 </div>
+
 <p>Drop Expression Below</p>
-<div id="droppable" class="ui-widget-content"></div>
+
+<table id="grid" width="800" height="200" border="2" >
+<tr>
+	<td align="center">
+		
+	</td>
+</tr>	
+</table>
+
+
 
 <% end %>

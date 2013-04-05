@@ -20,10 +20,12 @@ p, ol, ul, td {
 }
 
 table, tr, td {
-  border: 1px;
+ 
   padding: 2px;
   border-spacing: 2px;
 }
+
+
 
 #box{
   border: 1px solid black;
@@ -92,8 +94,9 @@ div {
 }
 
 #draggable { width: 100px; height: 25px; padding: 0.5em; }
-#droppable { width: 600px; height: 100px; padding: 0.5em; float: left; margin: 10px; }
-#dropme {}
+
+#droppable { width: 800px; height: 200px; padding: 0.5em; float: left; margin: 10px; }
+
 
 #footer {
  
