@@ -1,37 +1,17 @@
-<div id="nav" align="right">
-	<%= link_to "Signout", :logout %>
+<div class="headerstyle">
+<br></br>
+<h1>Bidpal - The Bridge Bidding practice site</h1>
 </div>
 
-<br /> <br />
 
-
-<style type="text/css">
-#div1 {
-    position:absolute;
-    top: 5%;
-    left: 5%;
-    margin-top: 20px; 
-}
-
-#div2 {
-    position:absolute;
-    top: 45%;
-    left: 2%;
-    margin-top: 20px; 
-}
-
-</style>
-
-<div id="div1">
-<h2>Bidplay - Bridge bidding practice site</h2>
-<div/>
-
-
-<div id="div2">
-<%= link_to "Administrator", :admin %>
-<%= link_to "Player", :dealer %>
-
-<div/>
-
-
-
+<table width="100%">
+	<tr>
+<td>
+		<%= link_to "Administrator", :admin %>                               
+ 		<%= link_to "Player", :dealer %>
+	</td>
+	<td align="right">	<%= link_to "Signout", :logout %>
+	</td>
+	</tr>
+	</table>
+<hr>
