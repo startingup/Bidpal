@@ -28,14 +28,23 @@ table, tr, td {
 
 
 #box{
-  border: 1px solid black;
-  width: 250px; 
+  border: 2px solid #009E8E;
+  width: 220px; 
+  background-color: white;
+  border-radius: 10px ;
 }
 
 #box2{
   border: 2px solid #009E8E;
   width: 99%;
   height: 30px; 
+}
+
+#tabs2.ui-widget-header {
+    background-color: #FF9140;
+    background-image: none;
+    color: white;
+    width: 100px;
 }
 
 .hiddentext {
