@@ -45,6 +45,14 @@ table, tr, td {
     background-image: none;
     color: white;
     width: 100px;
+    cursor:pointer;
+}
+
+#tabs2.ui-draggable-dragging { 
+  background-color: #34CFBE;
+  color: white;
+  width: 50px;
+  font-size: 8px;
 }
 
 .hiddentext {

@@ -43,34 +43,12 @@
 
 			}
 			
-			function getTopPos(el) {
-			var elmObj = document.getElementById(el);
-			
-		    for (var topPos = 0; elmObj != null; topPos += elmObj.offsetTop)
-		    { 
-		    	elmObj = elmObj.offsetParent; 
-		    }
-		        
-		    return topPos;
-			}
-			
-			function getLeftPos(el) {
-				var elmObj = document.getElementById(el);
-				
-			    for (var leftPos = 0; elmObj != null; leftPos += elmObj.offsetLeft)
-			        {
-			        	elmObj = elmObj.offsetParent;
-			        } 
-			    return leftPos;
-			}
-	
-			
- 
+
 			function EditDiv() {
 			var div1ID = "grid";
 			var div2ID = "left";
 			var div3ID = "right";
-			for (var i=0; i<count ; i++ )
+			for (var i=0; i<=10 ; i++ )
 			{
 				div1ID = div1ID + i;
 				div2ID = div2ID + i;
@@ -88,7 +66,7 @@
 			 	div3Object.contentEditable = 'true';
 			 	div3Object.designMode = 'on';
 			} 
-			var divID = "root tr td";
+			var divID = "grid";
 		
 			 var divObject = document.getElementById(divID);
 			 divObject.contentEditable = 'true';
@@ -99,74 +77,119 @@
 			
 			
 			var count = 0;
-			var tdLeft = "#left0";
-			var tdRight = "#right0";
+			var tdLeft = "left0";
+			var tdRight = "right0";
 			var tID ="grid0";
-			var Droppable = "#grid tr td";
+			var Droppable = "#grid";
 			var rowTab = "#grid0";
-			var tdTab = rowTab + " tr";	
+			var tdTab = rowTab + " tr";
 			
-			
-			$(function() {    $( "#table-1 td" ).draggable({
-				appendTo: "body",
-				helper: "clone"
-			});
-				   	
-			$( Droppable ).droppable({
-				   
+	   		
+    		function dropitem()
+    		{
+    			if(count < 1 )
+    			{
+    			   $( "#grid" ).droppable({	
 					activeClass: "ui-state-default",      
 					hoverClass: "ui-state-hover",      
 					accept: ":not(.ui-sortable-helper)",
+					tolerance:'pointer',
 					drop: function( event, ui ) {
-						
-					$( Droppable ).find( ".placeholder" ).remove();
-				 	$( "<table id='" + tID + "' width='95%' height='190' border='2'></table>"  ).appendTo( Droppable );			
+											
+					$( this ).find( ".placeholder" ).remove();
+				 	$( "<table id='" + tID + "' width='95%' height='190' border='2'></table>"  ).appendTo( this );			
 					$( "<tr></tr>"  ).appendTo( rowTab );
 				  	$( "<td id='" + tdLeft + "'></td>"  ).appendTo( tdTab );  
-				    $( "<td></td>"  ).text( ui.draggable.text() ).appendTo( tdTab );     
+				    $( "<td align='center'></td>"  ).text( ui.draggable.text() ).appendTo( tdTab );     
+				    $( "<td id='" + tdRight + "'></td>"  ).appendTo( tdTab );
+					
+					
+					count = count + 1;
+		  			tID = "grid" + count;
+					tbLeft = "left" + count;
+					tbRight = "right" + count;
+					rowTab = "#grid" + count;
+					tdTab = rowTab + " tr";	
+					
+					} 
+					});
+				}
+				else
+				{
+					makeLRDroppable();
+				}
+    		}
+    		
+    		function makeLRDroppable()
+    		{
+    			for ( var i=0; i<=10; i++ ) {
+    				
+			    	$( '#right' + i ).droppable( {
+			    	greedy: true,
+			    	activeClass: "ui-state-default",      
+					hoverClass: "ui-state-hover",      
+					accept: ":not(.ui-sortable-helper)",
+					tolerance:'pointer',
+			    	
+			      	drop: handleCardDrop,
+			  		over: function(event, ui){
+            		$( "#grid" ).droppable( "disable" )
+        			}
+			  		       
+					});
+  				}
+  			
+  				for ( var i=0; i<=10; i++ ) {
+			    	$( '#left' + i ).droppable( {
+			    	greedy: true,
+			    	activeClass: "ui-state-default",      
+					hoverClass: "ui-state-hover",      
+					accept: ":not(.ui-sortable-helper)",
+					tolerance:'pointer',
+			   			
+			       	drop: handleCardDrop,
+			  		over: function(event, ui){
+            		$( "#grid" ).droppable( "disable" )
+        			}
+			  		       
+					});
+  				}
+ 
+            }
+				
+			
+				
+				function handleCardDrop( event, ui ) {
+					$( this ).find( ".placeholder" ).remove();
+				 	$( "<table id='" + tID + "' width='95%' height='190' border='2'></table>"  ).appendTo( this );			
+					$( "<tr></tr>"  ).appendTo( rowTab );
+				  	$( "<td id='" + tdLeft + "'></td>"  ).appendTo( tdTab );  
+				    $( "<td align='center'></td>"  ).text( ui.draggable.text() ).appendTo( tdTab );     
 				    $( "<td id='" + tdRight + "'></td>"  ).appendTo( tdTab );
 				
-			  		count = count + 1;
+					count = count + 1;
 		  			tID = "grid" + count;
-					tbLeft = "#left" + count;
-					tbRight = "#right" + count;
+					tbLeft = "left" + count;
+					tbRight = "right" + count;
 					rowTab = "#grid" + count;
-					tbTab = rowTab + " tr";
+					tbTab = rowTab + " tr";	
+			    
+			  	}
+				
+    	
+    		
+    		function handleDragStop( event, ui ) {
+  				var offsetXPos = parseInt( ui.offset.left );
+  				var offsetYPos = parseInt( ui.offset.top );
+  			}
 					
-				 		
-				 	
-				 	if(count > 0)
-				 	{
-			  			var lTab = "";
-			  			var rtab = "";
-			  			
-			  			for(var i= 0; i < count; i++  )
-						{
-						    var e = window.event;
-						    
-							var x= 0;
-							var y = 0;
-							document.onmousemove = function(e){
-    							x = e.pageX;
-    							y = e.pageY;
-							}
-							
-							lTab = tbLeft + i;
-							rTab = tbRight + i;								
-							if ((x > getLeftPos(lTab) && x <= x + (lTab).innerWidth) && (y > getTopPos(lTab) && y <= y + (lTab).innerHeight))
-							{
-								Droppable = lTab;
-							}
-							else if ((x > getLeftPos(rTab) && x <= x + (rTab).innerWidth) && (y > getTopPos(rTab) && y <= y + (rTab).innerHeight) )
-							{
-								Droppable = rTab;
-							}
-						}
-			  		}
-			  		Droppable = "";
-			  		}        
-				});
-					
+			$(function() {    $( "#table-1 td" ).draggable({
+				appendTo: "body",
+				cursor: 'pointer',
+				opacity: 0.35,
+				helper: "clone",
+			});
+		
 			});
 			
 	</script>
