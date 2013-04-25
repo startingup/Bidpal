@@ -48,29 +48,30 @@
 			var div1ID = "grid";
 			var div2ID = "left";
 			var div3ID = "right";
+			
 			for (var i=0; i<=10 ; i++ )
 			{
-				div1ID = div1ID + i;
-				div2ID = div2ID + i;
-				div3ID = div3ID + i;
+				div1ID = "grid" + i;
+				div2ID = "left" + i;
+				div3ID = "right" + i;
 				
 				var div1Object = document.getElementById(div1ID);
 			 	div1Object.contentEditable = 'true';
-			 	div1Object.designMode = 'on';
+			 	//div1Object.designMode = 'on';
 			 	
 			 	var div2Object = document.getElementById(div2ID);
 			 	div2Object.contentEditable = 'true';
-			 	div2Object.designMode = 'on';
+			 	//div2Object.designMode = 'on';
 			 	
 			 	var div3Object = document.getElementById(div3ID);
 			 	div3Object.contentEditable = 'true';
-			 	div3Object.designMode = 'on';
+			 	//div3Object.designMode = 'on';
 			} 
 			var divID = "grid";
 		
 			 var divObject = document.getElementById(divID);
 			 divObject.contentEditable = 'true';
-			 divObject.designMode = 'on';
+			 //divObject.designMode = 'on';
 			 
 			void 0;					
 			}
@@ -94,25 +95,8 @@
 					hoverClass: "ui-state-hover",      
 					accept: ":not(.ui-sortable-helper)",
 					tolerance:'pointer',
-					drop: function( event, ui ) {
-											
-					$( this ).find( ".placeholder" ).remove();
-				 	$( "<table id='" + tID + "' width='95%' height='190' border='2'></table>"  ).appendTo( this );			
-					$( "<tr></tr>"  ).appendTo( rowTab );
-				  	$( "<td id='" + tdLeft + "'></td>"  ).appendTo( tdTab );  
-				    $( "<td align='center'></td>"  ).text( ui.draggable.text() ).appendTo( tdTab );     
-				    $( "<td id='" + tdRight + "'></td>"  ).appendTo( tdTab );
+					drop: handleCardDrop	
 					
-					
-					count = count + 1;
-		  			tID = "grid" + count;
-					tbLeft = "left" + count;
-					tbRight = "right" + count;
-					rowTab = "#grid" + count;
-					tdTab = rowTab + " tr";	
-					
-					}
- 
 					});
 				}
 				else
@@ -162,11 +146,11 @@
 				
 				function handleCardDrop( event, ui ) {
 					$( this ).find( ".placeholder" ).remove();
-				 	$( "<table id='" + tID + "' width='95%' height='190' border='2'></table>"  ).appendTo( this );			
+				 	$( "<table id='" + tID + "' width='97%' height='190' border='2'></table>"  ).appendTo( this );			
 					$( "<tr></tr>"  ).appendTo( rowTab );
-				  	$( "<td id='" + tdLeft + "'></td>"  ).appendTo( tdTab );  
+				  	$( "<td align='center' id='" + tdLeft + "'></td>"  ).appendTo( tdTab );  
 				    $( "<td align='center'></td>"  ).text( ui.draggable.text() ).appendTo( tdTab );     
-				    $( "<td id='" + tdRight + "'></td>"  ).appendTo( tdTab );
+				    $( "<td align='center' id='" + tdRight + "'></td>"  ).appendTo( tdTab );
 				
 					count = count + 1;
 		  			tID = "grid" + count;
@@ -187,7 +171,11 @@
 			$(function() {    $( "#table-1 td" ).draggable({
 				appendTo: "body",
 				cursor: 'pointer',
-				helper: "clone",
+				helper: 'clone',
+				start: function() {
+       			 $(this).css({ height: 20, width: 20 });
+    		}
+    			
 			});
 		
 			});

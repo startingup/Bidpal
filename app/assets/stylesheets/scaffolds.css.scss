@@ -9,13 +9,14 @@ body {
 .headerstyle {
   background-color: #34CFBE;
   color: white;
+  font-size: 16px;
   width: 100%;
   height: 120px;  
  }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  //font-size: 13px;
   line-height: 18px;
 }
 
@@ -29,7 +30,7 @@ table, tr, td {
 
 #box{
   border: 2px solid #009E8E;
-  width: 220px; 
+  width: 140px; 
   background-color: white;
   border-radius: 10px ;
 }
@@ -44,11 +45,13 @@ table, tr, td {
     background-color: #FF9140;
     background-image: none;
     color: white;
-    width: 100px;
+    width: 60px;
+    height: 30px;
+    font-size: 9px;
     cursor:pointer;
 }
 
-.dragOver { 
+.hoverClass { 
   background-color: #34CFBE;
   color: white;
   width: 50px;
