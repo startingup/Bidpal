@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> 
+  <script type="text/javascript" src="../script/ExportHTMLTable.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css" />
 
   
@@ -44,40 +45,9 @@
 			}
 			
 
-			function EditDiv() {
-			var div1ID = "grid";
-			var div2ID = "left";
-			var div3ID = "right";
+			//var exportTable1=new ExportHTMLTable('grid');
 			
-			for (var i=0; i<=10 ; i++ )
-			{
-				div1ID = "grid" + i;
-				div2ID = "left" + i;
-				div3ID = "right" + i;
-				
-				var div1Object = document.getElementById(div1ID);
-			 	div1Object.contentEditable = 'true';
-			 	//div1Object.designMode = 'on';
-			 	
-			 	var div2Object = document.getElementById(div2ID);
-			 	div2Object.contentEditable = 'true';
-			 	//div2Object.designMode = 'on';
-			 	
-			 	var div3Object = document.getElementById(div3ID);
-			 	div3Object.contentEditable = 'true';
-			 	//div3Object.designMode = 'on';
-			} 
-			var divID = "grid";
-		
-			 var divObject = document.getElementById(divID);
-			 divObject.contentEditable = 'true';
-			 //divObject.designMode = 'on';
-			 
-			void 0;					
-			}
-			
-			
-			var count = 0;
+			var count = 0;							//Variable for generating Dynamic table ID and ID for droppable area
 			var tdLeft = "left0";
 			var tdRight = "right0";
 			var tID ="grid0";
@@ -86,11 +56,11 @@
 			var tdTab = rowTab + " tr";
 			
 	   		
-    		function dropitem()
+    		function dropitem()						//This function drops the dragged element into respective droppable area
     		{
     			if(count < 1 )
     			{
-    			   $( "#grid" ).droppable({	
+    			   $( "#grid td" ).droppable({	
 					activeClass: "ui-state-default",      
 					hoverClass: "ui-state-hover",      
 					accept: ":not(.ui-sortable-helper)",
@@ -105,7 +75,7 @@
 				}
     		}
     		
-    		function makeLRDroppable()
+    		function makeLRDroppable()			// Makes all right and left cell of the dropped table as droppable area 
     		{
     			for ( var i=0; i<=10; i++ ) {
     				
@@ -118,7 +88,7 @@
 			    	
 			      	drop: handleCardDrop,
 			  		over: function(event, ui){
-            		$( "#grid" ).droppable( "disable" )
+            		$( "#grid td" ).droppable( "disable" )
         			}
 			  		       
 					});
@@ -134,17 +104,15 @@
 			   			
 			       	drop: handleCardDrop,
 			  		over: function(event, ui){
-            		$( "#grid" ).droppable( "disable" )
+            		$( "#grid td" ).droppable( "disable" )
         			}
 			  		       
 					});
   				}
  
             }
-				
-			
-				
-				function handleCardDrop( event, ui ) {
+	
+			function handleCardDrop( event, ui ) {			//Implementation of drop method.
 					$( this ).find( ".placeholder" ).remove();
 				 	$( "<table id='" + tID + "' width='97%' height='190' border='2'></table>"  ).appendTo( this );			
 					$( "<tr></tr>"  ).appendTo( rowTab );
@@ -157,18 +125,34 @@
 					tbLeft = "left" + count;
 					tbRight = "right" + count;
 					rowTab = "#grid" + count;
-					tdTab = rowTab + " tr";	
-			    
-			  	}
-				
-    	
-    		
+					tdTab = rowTab + " tr";			    
+			 }
+			
     		function handleDragStop( event, ui ) {
   				var offsetXPos = parseInt( ui.offset.left );
   				var offsetYPos = parseInt( ui.offset.top );
   			}
+  			
+  			function getExpression()		// This will get the expression from the webpage and store it in json
+  			{
+  				var json = '{';
+   				var otArr = [];
+   				var tbl2 = $('#grid tr').each(function(i) {        
+      			x = $(this).children();
+      			var itArr = [];
+      			x.each(function() {
+         		itArr.push('"' + $(this).text() + '"');
+      			});
+      			otArr.push('"' + i + '": [' + itArr.join(',') + ']');
+   				})
+   				json += otArr.join(",") + '}'
+
+   				alert(json);
+   				//return json;
+  				
+  			}
 					
-			$(function() {    $( "#table-1 td" ).draggable({
+			$(function() {    $( "#table-1 td" ).draggable({		//This methods make element draggable. 
 				appendTo: "body",
 				cursor: 'pointer',
 				helper: 'clone',

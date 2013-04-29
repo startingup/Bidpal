@@ -14,8 +14,9 @@
 <%= button_to "Back", hand_states_path, :method => "get" %>
 </td>
 <td>
-<%= button_to "Generate Deal", hand_states_path, :method => "get" %>
+	 <%= tag "input", { "type" => "button", "value" => "Generate Deal", "onclick" => "getExpression()" } %> 
 </td>
+
 <td>
 <%= button_to "Go to Bidding", :bidding, :method => "get" %>
 </td>

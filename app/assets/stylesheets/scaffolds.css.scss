@@ -28,17 +28,19 @@ table, tr, td {
 
 
 
-#box{
+#tableBox{
   border: 2px solid #009E8E;
-  width: 140px; 
+  //width: 140px; 
   background-color: white;
   border-radius: 10px ;
 }
 
-#box2{
+#handsBox{
   border: 2px solid #009E8E;
-  width: 99%;
-  height: 30px; 
+  width: 600px;
+  height: 350px; 
+  background-color: white;
+  border-radius: 10px;
 }
 
 #tabs2.ui-widget-header {
@@ -49,13 +51,7 @@ table, tr, td {
     height: 30px;
     font-size: 9px;
     cursor:pointer;
-}
-
-.hoverClass { 
-  background-color: #34CFBE;
-  color: white;
-  width: 50px;
-  font-size: 8px;
+    border-radius: 5px;
 }
 
 .hiddentext {

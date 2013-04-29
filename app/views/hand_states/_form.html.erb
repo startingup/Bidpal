@@ -11,65 +11,76 @@
     </div>
   <% end %>
 
-
-<div id="box">
-<table id="table-1" cellpadding="20"> 
+<table>
+	<tr>
+		<td>
+			<div id="tableBox">
+			<table id="table-1" cellpadding="20"> 
+					
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center" >AND</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">OR</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">+</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">-</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">></p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center"><</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">>=</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center"><=</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">=</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">!=</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">HCP</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">SHAPE</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">CLUB</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">DIAMOND</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">SPADE</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">HEART</p></div></td>
+				</tr>
+				
+				<tr>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">ANY</p></div></td>
+					<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">()</p></div></td>
+				</tr>
 		
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center" >AND</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">OR</p></div></td>
+			</table>
+			</div>
+			
+		</td>
+		<td></td> <td></td> <td></td> <td></td>
+		<td>
+			<div id="handsBox">
+				<p align="center">Generated Hands</p>
+			</div>		
+		</td>
 	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">+</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">-</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">></p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center"><</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">>=</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center"><=</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">=</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">!=</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">HCP</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">SHAPE</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">CLUB</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">DIAMOND</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">SPADE</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">HEART</p></div></td>
-	</tr>
-	
-	<tr>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">ANY</p></div></td>
-		<td onmouseup = dropitem()><div id="tabs2" class="ui-widget-header"> <p align="center">()</p></div></td>
-	</tr>
-	
-	
-	
 </table>
-</div>
+
 
 <p>Drop Expression Below</p>
 <div contenteditable="true">
-<table  width="800" height="200" border="2" >
+<table  width="800" height="200" border="1" id="grid">
 <tr>
-	<td align="center" id="grid">
+	<td align="center" >
 		
 	</td>
 </tr>	
