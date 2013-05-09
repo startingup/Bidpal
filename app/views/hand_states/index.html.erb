@@ -7,11 +7,18 @@
 <table width="100%">
 	<tr>
 <td>
-		<%= link_to "Administrator", :admin %>                               
- 		<%= link_to "Player", :dealer %>
+		<%= link_to "Administrator", :admin %>
+		<%= link_to "Dealer", :dealer %>                               
+ 		<%= link_to "Player", :bidding %>
 	</td>
 	<td align="right">	<%= link_to "Signout", :logout %>
 	</td>
 	</tr>
 	</table>
 <hr>
+
+<%= tabs_tag do |tab| %>
+  <%= tab.home       'Homepage', :admin %>
+  <%= tab.dashboard  'Dashboard', :dealer %>
+  <%= tab.account    'Account', :bidding %>
+<% end %>
