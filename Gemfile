@@ -39,6 +39,9 @@ gem "heroku", "~> 2.30.2"
 
 gem 'rolify'
 
+gem "tabs_on_rails"
+
+
 #gem 'private_pub'
 
 #gem 'dealer', :path => "#{File.expand_path(__FILE__)}/../vendor/dealer-0.0.1"
