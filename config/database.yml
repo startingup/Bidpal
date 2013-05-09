@@ -17,7 +17,7 @@ development:
   #database: BidPal_development_new
   pool: 5
   username: postgres	#root
-  password: ps7153!@#	#root
+  password: "ps7153!@#"	#root
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -32,7 +32,7 @@ test:
   #database: BidPal_test_new
   pool: 5
   username: postgres
-  password: ps7153!@#
+  password: "ps7153!@#"
   host: localhost
 
 production:

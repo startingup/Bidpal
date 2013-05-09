@@ -21,3 +21,4 @@ $(document).ready(function() {
         $("#TextEdit").load('/bidding');
     }, pingAfter);
 });
+

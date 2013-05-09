@@ -1,3 +1,8 @@
+<div class="headerstyle">
+<br></br>
+<h1>Bidpal - User Profile</h1>
+</div>
+
 <div id="nav" align="right">
 	<%= link_to "Signout", :logout %>
 </div>
@@ -5,23 +10,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
+  <b>Name :</b>
+  <%= @user.name %>
 </p>
 
 <p>
-  <b>Crypted password:</b>
-  <%= @user.crypted_password %>
+  <b>Role :</b>
+  <%= @user.role %>
 </p>
 
 <p>
-  <b>Password salt:</b>
-  <%= @user.password_salt %>
-</p>
-
-<p>
-  <b>Persistence token:</b>
-  <%= @user.persistence_token %>
+  <b>Email :</b>
+  <%= @user.email %>
 </p>
 
 

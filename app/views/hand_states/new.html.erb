@@ -14,11 +14,15 @@
 <%= button_to "Back", hand_states_path, :method => "get" %>
 </td>
 <td>
-	 <%= tag "input", { "type" => "button", "value" => "Generate Deal", "onclick" => "getExpression()" } %> 
+	 <%= tag "input", { "type" => "button", "data-remote" => "true", "value" => "Generate Deal", "onclick" => "getExpression()" } %> 
 </td>
 
 <td>
 <%= button_to "Go to Bidding", :bidding, :method => "get" %>
 </td>
+<td>
+	 <%= tag "input", { "type" => "button", "value" => "Next", "onclick" => "ajaxRequest()" } %> 
+</td>
+
 </tr>
 </table>

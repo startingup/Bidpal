@@ -75,6 +75,7 @@ def create
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    #Product.delete(params[:id])
 
     respond_to do |format|
       format.html { redirect_to users_url }

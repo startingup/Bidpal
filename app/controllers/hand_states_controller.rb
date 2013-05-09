@@ -68,6 +68,13 @@ class HandStatesController < ApplicationController
       end
     end
   end
+  
+  def tff
+    respond_to do |format|
+      format.html { render :text => "hello" }
+     # format.js render :text => "hello"
+    end
+ end
 
   # DELETE /hand_states/1
   # DELETE /hand_states/1.json

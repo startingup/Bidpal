@@ -87,9 +87,10 @@ BidPal::Application.routes.draw do
   match 'login' => 'user_sessions#new', :as => :login
   
   
-  match 'admin' => 'hand_states#admin', :as => :admin
+  match 'admin' => 'users#index', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
   match 'bidding' => 'chat_messages#index', :as => :bidding
-  #match 'bidding' => 'chat_messages#bidding', :as => :bidding
+  match 'tff' => 'hand_states#tff', :as => :tff
+  match 'home' => 'hand_states#index', :as => :home
   match 'refreshing' => 'chat_messages#refresher', :as => :refreshing
  end

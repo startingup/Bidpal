@@ -41,12 +41,9 @@
 					$http.open('GET', 'http://localhost:3000/refreshing' + '?' + new Date().getTime(), true);
 					$http.send(null);
 				}
-
 			}
 			
 
-			//var exportTable1=new ExportHTMLTable('grid');
-			
 			var count = 0;							//Variable for generating Dynamic table ID and ID for droppable area
 			var tdLeft = "left0";
 			var tdRight = "right0";
@@ -55,7 +52,7 @@
 			var rowTab = "#grid0";
 			var tdTab = rowTab + " tr";
 			
-	   		
+			//$(document).on("click","#next",ajaxRequest);
     		function dropitem()						//This function drops the dragged element into respective droppable area
     		{
     			if(count < 1 )
@@ -133,25 +130,53 @@
   				var offsetYPos = parseInt( ui.offset.top );
   			}
   			
+  			/*function ajaxRequest(dataToStringify) {
+			   var stringifiedData = JSON.stringify(dataToStringify);
+			
+			   jQuery.ajax({
+			      url: '/hand_states/tff',
+			      data: {stringified: stringifiedData},
+			      success: function(data) {
+			         //code to handle successful AJAX post
+			         			         
+			      },
+			      error(XMLHttpRequest, textStatus, errorThrown) {
+			         alert("Error: Cannot send data to server!");
+			      }
+			   });
+			}
+  			*/
+  			
+  			function ajaxRequest(dataToStringify) {
+			   var stringifiedData = JSON.stringify(dataToStringify);
+				$.ajax({
+  						url: '/tff',
+  						data: { json: JSON.stringify(dataToStringify) }
+				});
+			}
+			
   			function getExpression()		// This will get the expression from the webpage and store it in json
   			{
   				var json = '{';
    				var otArr = [];
-   				var tbl2 = $('#grid tr').each(function(i) {        
+   				var tbl2 = $('#grid0 tr').each(function(i) {        
       			x = $(this).children();
       			var itArr = [];
+      			
+      			
       			x.each(function() {
          		itArr.push('"' + $(this).text() + '"');
       			});
       			otArr.push('"' + i + '": [' + itArr.join(',') + ']');
    				})
    				json += otArr.join(",") + '}'
-
+				ajaxRequest(json);	
+			
    				alert(json);
-   				//return json;
-  				
+			   	
   			}
-					
+  			
+
 			$(function() {    $( "#table-1 td" ).draggable({		//This methods make element draggable. 
 				appendTo: "body",
 				cursor: 'pointer',
@@ -161,7 +186,6 @@
     		}
     			
 			});
-		
 			});
 			
 	</script>
