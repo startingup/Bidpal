@@ -3,22 +3,26 @@
 <h1>Bidpal - The Bridge Bidding practice site</h1>
 </div>
 
-
+<div id="menubar">
 <table width="100%">
 	<tr>
 <td>
-		<%= link_to "Administrator", :admin %>
+	<!--	<%= link_to "Administrator", :admin %>
 		<%= link_to "Dealer", :dealer %>                               
- 		<%= link_to "Player", :bidding %>
+ 		<%= link_to "Player", :bidding %> -->
+	
+	<%= tabs_tag :open_tabs => { :id => "tabs", :class => "cool" } do |tab| %>
+	  <%= tab.home       'Administrator', :admin, :style => "padding: 20px" %>
+	  <%= tab.dashboard  'Dealer', :dealer, :style => "padding: 20px" %>
+	  <%= tab.account    'PLayer', :bidding %>
+	<% end %>	 		
 	</td>
 	<td align="right">	<%= link_to "Signout", :logout %>
 	</td>
 	</tr>
 	</table>
-<hr>
+</div>
 
-<%= tabs_tag do |tab| %>
-  <%= tab.home       'Homepage', :admin %>
-  <%= tab.dashboard  'Dashboard', :dealer %>
-  <%= tab.account    'Account', :bidding %>
-<% end %>
+
+
+

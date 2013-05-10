@@ -1,6 +1,7 @@
 class HandStatesController < ApplicationController
   # GET /hand_states
   # GET /hand_states.json
+  set_tab :dealer
   def index
     @hand_states = HandState.all
 

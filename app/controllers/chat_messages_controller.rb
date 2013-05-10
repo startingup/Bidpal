@@ -1,6 +1,7 @@
 class ChatMessagesController < ApplicationController
   # GET /chat_messages
   # GET /chat_messages.json
+  set_tab :bidding
   def index
     @chat_messages = ChatMessage.all
 	  @chat_message = ChatMessage.new

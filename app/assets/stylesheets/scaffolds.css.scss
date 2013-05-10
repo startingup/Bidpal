@@ -12,6 +12,8 @@ body {
   font-size: 16px;
   width: 100%;
   height: 120px;  
+  background: -moz-linear-gradient(top, #00675C, #5DCFC3);    
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to( #999));
  }
 
 p, ol, ul, td {
@@ -26,11 +28,19 @@ table, tr, td {
   border-spacing: 2px;
 }
 
-tr:nth-child(even) {
-    background-color: #FFAE73;
+//tr:nth-child(even) {
+  //  background-color: #FFAE73;
+//}
+
+#menubar {
+  //background:#FFAE73;
+  background: -moz-linear-gradient(top, #5DCFC3, #FFf);    
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to( #999));
 }
 
-
+//#menubar li a {
+  //text-shadow:1px 1px 10px #009E8E;
+//}
 #tableBox{
   border: 2px solid #009E8E;
   //width: 140px; 
@@ -79,7 +89,6 @@ a {
   }
   &:hover {
     color: #FF6C00;
-    background-color: white;
   }
 }
 
