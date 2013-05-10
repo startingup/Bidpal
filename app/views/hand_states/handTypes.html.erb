@@ -1,0 +1,62 @@
+<div class="headerstyle">
+<br></br>
+<h1>Bidpal - Basic hand Types</h1>
+</div>
+<div id="menubar" align="right">
+	<%= link_to "Signout", :logout %>
+</div>
+
+<table width="500">
+	<tr>
+		<td>
+			WEST 1N
+		</td>
+		<td>
+			<%= link_to "Preview", preview1_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+			
+		</td>
+		<td>
+			<%= link_to "Select Hand", :bidding %>
+		</td> 
+	</tr>
+	
+	<tr>
+		<td>
+			WEST 1C
+		</td>
+		<td>
+			<%= link_to "Preview", preview2_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+		</td>
+		<td>
+			<%= link_to "Select Hand", :bidding %>
+		</td> 
+	</tr>
+	
+	<tr>
+		<td>
+			WEST 1M
+		</td>
+		<td>
+			<%= link_to "Preview", preview3_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+		</td>
+		<td>
+			<%= link_to "Select Hand", :bidding %>
+		</td> 
+	</tr>
+	
+	<tr>
+		<td>
+			WEST SHORT
+		</td>
+		<td>
+			<%= link_to "Preview", preview4_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+		</td>
+		<td>
+			<%= link_to "Select Hand", :bidding %>
+		</td> 
+	</tr>
+</table>
+
+<br /><br />
+
+<%= link_to "New Hand", :dealer %>

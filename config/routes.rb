@@ -91,6 +91,14 @@ BidPal::Application.routes.draw do
   match 'dealer' => 'hand_states#new', :as => :dealer
   match 'bidding' => 'chat_messages#index', :as => :bidding
   match 'tff' => 'hand_states#tff', :as => :tff
+  match 'handTypes' => 'hand_states#handTypes', :as => :handTypes
+  
+  match 'preview1' => 'hand_states#preview1', :as => :preview1
+  match 'preview2' => 'hand_states#preview2', :as => :preview2
+  match 'preview3' => 'hand_states#preview3', :as => :preview3
+  match 'preview4' => 'hand_states#preview4', :as => :preview4
   match 'home' => 'hand_states#index', :as => :home
+  
   match 'refreshing' => 'chat_messages#refresher', :as => :refreshing
+  
  end

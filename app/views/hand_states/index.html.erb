@@ -13,8 +13,8 @@
 	
 	<%= tabs_tag :open_tabs => { :id => "tabs", :class => "cool" } do |tab| %>
 	  <%= tab.home       'Administrator', :admin, :style => "padding: 20px" %>
-	  <%= tab.dashboard  'Dealer', :dealer, :style => "padding: 20px" %>
-	  <%= tab.account    'PLayer', :bidding %>
+	  <%= tab.dashboard  'Dealer', :handTypes, :style => "padding: 20px" %>
+	  <%= tab.account    'Player', :bidding %>
 	<% end %>	 		
 	</td>
 	<td align="right">	<%= link_to "Signout", :logout %>

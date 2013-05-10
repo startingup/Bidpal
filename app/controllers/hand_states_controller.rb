@@ -76,6 +76,27 @@ class HandStatesController < ApplicationController
      # format.js render :text => "hello"
     end
  end
+ 
+ def handTypes
+   
+ end
+ 
+def preview1
+   
+end
+
+def preview2
+   
+end
+
+def preview3
+   
+end
+
+def preview4
+   
+end
+ 
 
   # DELETE /hand_states/1
   # DELETE /hand_states/1.json
