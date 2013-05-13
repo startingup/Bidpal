@@ -53,6 +53,7 @@
 			var tdTab = rowTab + " tr";
 			
 			//$(document).on("click","#next",ajaxRequest);
+			
     		function dropitem()						//This function drops the dragged element into respective droppable area
     		{
     			if(count < 1 )
@@ -147,7 +148,7 @@
 			}
   			*/
   			
-  			function ajaxRequest(dataToStringify) {
+  			function ajaxRequest(dataToStringify) {		// This will make ajax call to controller for handole json
 			   var stringifiedData = JSON.stringify(dataToStringify);
 				$.ajax({
   						url: '/tff',

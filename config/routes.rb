@@ -92,7 +92,6 @@ BidPal::Application.routes.draw do
   match 'bidding' => 'chat_messages#index', :as => :bidding
   match 'tff' => 'hand_states#tff', :as => :tff
   match 'handTypes' => 'hand_states#handTypes', :as => :handTypes
-  
   match 'preview1' => 'hand_states#preview1', :as => :preview1
   match 'preview2' => 'hand_states#preview2', :as => :preview2
   match 'preview3' => 'hand_states#preview3', :as => :preview3
