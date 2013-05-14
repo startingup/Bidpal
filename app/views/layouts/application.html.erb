@@ -151,11 +151,29 @@
   			function ajaxRequest(dataToStringify) {		// This will make ajax call to controller for handole json
 			   var stringifiedData = JSON.stringify(dataToStringify);
 				$.ajax({
+						contentType: "application/json",
   						url: '/tff',
   						data: { json: JSON.stringify(dataToStringify) }
 				});
 			}
 			
+			function alert1() {
+				alert("North \t\t East \t\t West \t\t South \n5 6   \t\t 7 8 J Q K \t 2 3 4 \t\t 9 T A \n4 5 6 J K \t 7 \t\t\t 2 3 A \t\t 8 9 T Q \n4 5 6 J \t\t 7 K \t\t 2 3 Q A \t\t 8 9 T \n4 5 \t\t\t 6 7 J Q K \t 2 3 A \t\t 8 9 T  "  
+				)
+			}
+			
+			function alert2() {
+				alert("North \t\t East \t\t West \t\t South \nA 9 8 5 \t\t Q T   \t\t K J 3 \t\t 7 6 4 2  \nT 5 \t\t\t K 9 4 3 \t\t A Q 7 2 \t\t J 8 6 \n3 \t\t\t J T 7 6 2 \t A Q 9 5 4 \t K 8 \nA 9 8 5 4 3 \t K Q   \t\t A Q 9 5 4 \t T 7 6 2  "  
+				)
+			}
+			function alert3() {
+				alert("North \t\t East \t\t West \t\t South \nA T 5 4 \t\t K 8 7 \t\t Q J 2 \t\t 9 6 3 \nQ 6   \t\t J T 5 \t\t K 9 8 4 3 \t A 7 2 \nQ T 5 \t\t 8 6 3 \t\t A J 4 2 \t\t K 9 7 \nA 9 8 6 \t\t K T 7 2 \t\t 5 \t\t\t Q J 4 3  "  
+				)
+			}
+			function alert4() {
+				alert("North \t\t East \t\t West \t\t South \nA J 4 3 \t\t T 9   \t\t K Q 6 5 \t\t 8 7 2 \nJ 4   \t\t Q 6 3 \t\t A T 9 7 5 \t K 8 2 \nA Q 7 \t\t K 9 8 5 2 \t 6 4 3 \t\t J T \n8 7 4 2 \t\t Q J 3 \t\t T \t\t\t A K 9 6 5  "  
+				)
+			}
   			function getExpression()		// This will get the expression from the webpage and store it in json
   			{
   				var json = '{';

@@ -12,7 +12,7 @@
 			WEST 1N
 		</td>
 		<td>
-			<%= link_to "Preview", preview1_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+			<%= link_to "Preview", :handTypes, :onclick => "alert1()" %>
 			
 		</td>
 		<td>
@@ -25,7 +25,7 @@
 			WEST 1C
 		</td>
 		<td>
-			<%= link_to "Preview", preview2_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+			<%= link_to "Preview", :handTypes, :onclick => "alert2()" %>
 		</td>
 		<td>
 			<%= link_to "Select Hand", :bidding %>
@@ -37,7 +37,8 @@
 			WEST 1M
 		</td>
 		<td>
-			<%= link_to "Preview", preview3_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+			<%= link_to "Preview", :handTypes, :onclick => "alert3()" %>
+			<!--<%= link_to "Preview", preview3_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>-->
 		</td>
 		<td>
 			<%= link_to "Select Hand", :bidding %>
@@ -49,7 +50,7 @@
 			WEST SHORT
 		</td>
 		<td>
-			<%= link_to "Preview", preview4_path, :onclick => "window.open(this.href,'preview', 'height=400, width=400');return false;" %>
+			<%= link_to "Preview", :handTypes, :onclick => "alert4()" %>
 		</td>
 		<td>
 			<%= link_to "Select Hand", :bidding %>

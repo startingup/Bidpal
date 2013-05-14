@@ -90,6 +90,7 @@ BidPal::Application.routes.draw do
   match 'admin' => 'users#index', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
   match 'bidding' => 'chat_messages#index', :as => :bidding
+  
   match 'tff' => 'hand_states#tff', :as => :tff
   match 'handTypes' => 'hand_states#handTypes', :as => :handTypes
   match 'preview1' => 'hand_states#preview1', :as => :preview1

@@ -72,7 +72,7 @@ class HandStatesController < ApplicationController
   
   def tff
     respond_to do |format|
-      format.html { render :text => "hello" }
+      format.json { render :text => "hello" }
      # format.js render :text => "hello"
     end
  end
