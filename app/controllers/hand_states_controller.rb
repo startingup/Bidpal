@@ -71,8 +71,9 @@ class HandStatesController < ApplicationController
   end
   
   def tff
+    
     respond_to do |format|
-      format.json { render :text => "hello" }
+      format.json { redirect_to hand_states_url }
      # format.js render :text => "hello"
     end
  end

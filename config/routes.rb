@@ -86,7 +86,6 @@ BidPal::Application.routes.draw do
   match 'logout' => 'user_sessions#destroy', :as => :logout
   match 'login' => 'user_sessions#new', :as => :login
   
-  
   match 'admin' => 'users#index', :as => :admin
   match 'dealer' => 'hand_states#new', :as => :dealer
   match 'bidding' => 'chat_messages#index', :as => :bidding
@@ -97,7 +96,12 @@ BidPal::Application.routes.draw do
   match 'preview2' => 'hand_states#preview2', :as => :preview2
   match 'preview3' => 'hand_states#preview3', :as => :preview3
   match 'preview4' => 'hand_states#preview4', :as => :preview4
+  
+  
   match 'home' => 'hand_states#index', :as => :home
+  match 'about_us' => 'user#about_us', :as => :about_us
+  match 'contact' => 'user#contact', :as => :contact
+  match 'game' => 'user#game', :as => :game
   
   match 'refreshing' => 'chat_messages#refresher', :as => :refreshing
   

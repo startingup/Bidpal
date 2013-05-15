@@ -2,18 +2,25 @@
 <br></br>
 <h1>Bidpal - Administrator</h1>
 </div>
-<div id="menubar" align="right">
-	<table>
+<div id="menubar">
+	<table width="100%">
 	<tr>
 		<td>
-			<%= link_to "Home", :home %>
+		<!--	<%= link_to "Home", :home %>
 		</td>
 		
 		<td>
-			<%= link_to "Play", :dealer %>
+			<%= link_to "Play", :dealer %> -->
+		<%= tabs_tag :open_tabs => { :id => "tabs", :class => "cool" } do |tab| %>
+			  <%= tab.home       'Home', :home, :style => "padding: 20px" %>
+			  <%= tab.dashboard  'About US', :about_us, :style => "padding: 20px" %>
+			  <%= tab.account    'Bridge Game', :game %>
+			  <%= tab.account    'Contact US', :contact %>
+		<% end %>
+
 		</td>
 		
-		<td>
+		<td align="right">
 			<%= link_to "Signout", :logout %>
 		</td>
 		
@@ -46,6 +53,3 @@
 
 <%= link_to 'New User', new_user_path %>
 		
-
-
-

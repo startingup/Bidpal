@@ -84,5 +84,15 @@ def create
     end
   end
   
+  def about_us
+    
+  end
 
+  def contact
+    
+  end  
+
+  def game
+    
+  end
 end
