@@ -28,9 +28,6 @@ table, tr, td {
   border-spacing: 2px;
 }
 
-//tr:nth-child(even) {
-  //  background-color: #FFAE73;
-//}
 
 #menubar {
   //background:#FFAE73;
@@ -64,6 +61,85 @@ table, tr, td {
     height: 30px;
     font-size: 9px;
     cursor:pointer;
+    border-radius: 5px;
+}
+
+#overviewPanel {
+    border: 2px solid #009E8E;
+    background-color: #E9F2F1;
+    background-image: none;
+    color: #FF6C00;
+    width: 200px;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#biddingPanel {
+    border: 2px solid #009E8E;
+    background-color: #E9F2F1;
+    background-image: none;
+    color: #FF6C00;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#messagesPanel {
+    border: 2px solid #009E8E;
+    background-color: #E9F2F1;
+    background-image: none;
+    color: #FF6C00;
+    width: 200px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#myHandTypesPanel {
+    border: 2px solid #009E8E;
+    background-color: #FAE9DF;
+    color: #009E8E;
+    border-radius: 5px;
+    position: relative;
+}
+
+#bottom {
+      position: absolute;
+      bottom: 0;
+}
+
+#myProjectsPanel {
+    border: 2px solid #009E8E;
+    background-color: #FAE9DF;
+    color: #009E8E;
+    border-radius: 5px;
+}
+
+#yourTurnPanel {
+    border: 2px solid #009E8E;
+    background-color: #FAE9DF;
+    color: #009E8E;
+    border-radius: 5px;
+}
+
+#newDealsPanel {
+    border: 2px solid #009E8E;
+    background-color: #FAE9DF;
+    color: #009E8E;
+    border-radius: 5px;
+}
+
+#discussionPanel {
+    border: 2px solid #009E8E;
+    background-color: #FAE9DF;
+    color: #009E8E;
+    border-radius: 5px;
+}
+
+#archivePanel {
+    border: 2px solid #009E8E;
+    background-color: #FAE9DF;
+    color: #009E8E;
     border-radius: 5px;
 }
 

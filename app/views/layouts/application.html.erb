@@ -142,14 +142,16 @@
 				});
 			}
 			
-			/*$("Next").click(function(){
+			/*function ajaxPost()
+			{
 			   $.post("/tff",
 			   data: { json: JSON.stringify(json) },
 			   function(data,status){
 			     alert("Data: " + data + "\nStatus: " + status);
-			   });
-			 });
-			*/
+			   }
+			   );
+			 }
+			 */
 			function sysAlert(n) {
 				
 				switch(n)
@@ -192,7 +194,7 @@
    				json += otArr.join(",") + '}'
 				//ajaxRequest(json);	
 			
-   				//alert(json);			   	
+   				alert(json);			   	
   			}
   			
 

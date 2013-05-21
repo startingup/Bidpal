@@ -79,7 +79,10 @@ class HandStatesController < ApplicationController
  end
  
  def handTypes
-   
+    @users = User.where("last_request_at > :Time", :Time => Time.now - 5.hour)
+    @users.each do |user|
+      @user = user.name
+    end
  end
  
 def preview1

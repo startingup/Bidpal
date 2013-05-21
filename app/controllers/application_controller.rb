@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
   include  ApplicationHelper
-
-  helper_method :current_user
+  helper_method :current_user  #make this method available in views
 
 private
 
