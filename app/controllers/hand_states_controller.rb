@@ -71,10 +71,12 @@ class HandStatesController < ApplicationController
   end
   
   def tff
-    
+    @usrData = {} 
+    #flash[:notice] = @usrData
     respond_to do |format|
-      format.json { redirect_to hand_states_url }
-     # format.js render :text => "hello"
+      format.html {render :text => @usrData } 
+      
+      format.json { render json: @usrData }
     end
  end
  

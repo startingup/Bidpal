@@ -83,6 +83,7 @@ table, tr, td {
     width: 500px;
     height: 500px;
     border-radius: 10px;
+    position: relative;
 }
 
 #messagesPanel {
@@ -93,6 +94,7 @@ table, tr, td {
     width: 200px;
     height: 500px;
     border-radius: 10px;
+    position: relative;
 }
 
 #myHandTypesPanel {
@@ -103,16 +105,12 @@ table, tr, td {
     position: relative;
 }
 
-#bottom {
-      position: absolute;
-      bottom: 0;
-}
-
 #myProjectsPanel {
     border: 2px solid #009E8E;
     background-color: #FAE9DF;
     color: #009E8E;
     border-radius: 5px;
+    position: relative;
 }
 
 #yourTurnPanel {
@@ -120,6 +118,7 @@ table, tr, td {
     background-color: #FAE9DF;
     color: #009E8E;
     border-radius: 5px;
+    position: relative;
 }
 
 #newDealsPanel {
@@ -127,6 +126,7 @@ table, tr, td {
     background-color: #FAE9DF;
     color: #009E8E;
     border-radius: 5px;
+    position: relative;
 }
 
 #discussionPanel {
@@ -134,6 +134,7 @@ table, tr, td {
     background-color: #FAE9DF;
     color: #009E8E;
     border-radius: 5px;
+    position: relative;
 }
 
 #archivePanel {
@@ -141,6 +142,12 @@ table, tr, td {
     background-color: #FAE9DF;
     color: #009E8E;
     border-radius: 5px;
+    position: relative;
+}
+
+#bottom {
+      position: absolute;
+      bottom: 0;
 }
 
 .hiddentext {
@@ -195,6 +202,10 @@ a {
 
         }
 
+.beingDragged {
+  width: 10px;
+  height: 10px;
+}
 
 
 div {

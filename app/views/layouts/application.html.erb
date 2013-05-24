@@ -44,8 +44,7 @@
 			}
 			
 			
-			var count = 0;
-			var json;							//Variable for generating Dynamic table ID and ID for droppable area
+			var count = 0;							//Variable for generating Dynamic table ID and ID for droppable area
 			var tdLeft = "left0";
 			var tdRight = "right0";
 			var tID ="grid0";
@@ -64,7 +63,10 @@
 					hoverClass: "ui-state-hover",      
 					accept: ":not(.ui-sortable-helper)",
 					tolerance:'pointer',
-					drop: handleCardDrop	
+					drop: handleCardDrop,
+					over: function(event, ui){
+			  		$(ui.helper).css({width:'10px',height:'10px'});
+            		}	
 					
 					});
 				}
@@ -87,6 +89,7 @@
 			    	
 			      	drop: handleCardDrop,
 			  		over: function(event, ui){
+			  		$(ui.helper).css({width:'10px',height:'10px'});
             		$( "#grid td" ).droppable( "disable" )
         			}
 			  		       
@@ -103,6 +106,7 @@
 			   			
 			       	drop: handleCardDrop,
 			  		over: function(event, ui){
+			  		$(ui.helper).css({width:'10px',height:'10px'});
             		$( "#grid td" ).droppable( "disable" )
         			}
 			  		       
@@ -136,22 +140,33 @@
   			function ajaxRequest(dataToStringify) {		// This will make ajax call to controller for handole json
 			   var stringifiedData = JSON.stringify(dataToStringify);
 				$.ajax({
-						dataType: "html",
+						type: "POST",
+						dataType: "json",
   						url: '/tff',
-  						data: { json: JSON.stringify(json) }
+  						data: stringifiedData,
+  						success: function(data) {
+			            alert(data);
+				          },
+				    	failure: function() {
+				        alert("Unsuccessful");
+				          }
+					});
+			}
+			
+			function fetchData(dataToStringify) {
+				$.ajax({
+				type: "GET",	
+				url: '/tff',
+				data: dataToStringify,
+				dataType: "json",
+				success: function(data) {
+					alert(data);
+				}
+				
 				});
 			}
 			
-			/*function ajaxPost()
-			{
-			   $.post("/tff",
-			   data: { json: JSON.stringify(json) },
-			   function(data,status){
-			     alert("Data: " + data + "\nStatus: " + status);
-			   }
-			   );
-			 }
-			 */
+			
 			function sysAlert(n) {
 				
 				switch(n)
@@ -179,7 +194,7 @@
 			
   			function getExpression()		// This will get the expression from the webpage and store it in json
   			{
-  			    json = '{';
+  			    var json = '{';
    				var otArr = [];
    				var tbl2 = $('#grid0 tr').each(function(i) {        
       			x = $(this).children();
@@ -189,23 +204,20 @@
       			x.each(function() {
          		itArr.push('"' + $(this).text() + '"');
       			});
-      			otArr.push('"' + i + '": [' + itArr.join(',') + ']');
-   				})
+      			otArr.push('" somedata ": [' + itArr.join(',') + ']');
+   				//return false;
+   				});
    				json += otArr.join(",") + '}'
-				//ajaxRequest(json);	
-			
-   				alert(json);			   	
+				ajaxRequest(json);	
+				//fetchData(json);
+   				//alert(json);			   	
   			}
   			
 
 			$(function() {    $( "#table-1 td" ).draggable({		//This methods make element draggable. 
 				appendTo: "body",
 				cursor: 'pointer',
-				helper: 'clone',
-				start: function() {
-       			 $(this).css({ height: 20, width: 20 });
-    		}
-	
+				helper : 'clone'
 			});
 			});
 			
@@ -213,8 +225,9 @@
 </head>
 
 <body onmousemove="return EditDiv()">
-	
 <%= yield %>
 
+
+    
 </body>
 </html>
